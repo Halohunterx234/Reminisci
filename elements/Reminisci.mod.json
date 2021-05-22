@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "Reminisci",
+    "icon": {
+      "value": "Items.CLOCK"
+    },
+    "showSearch": true
+  }
+}

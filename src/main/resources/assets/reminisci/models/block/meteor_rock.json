@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "reminisci:blocks/meteor_rock_block",
+    "up": "reminisci:blocks/meteor_rock_block",
+    "north": "reminisci:blocks/meteor_rock_block",
+    "east": "reminisci:blocks/meteor_rock_block",
+    "south": "reminisci:blocks/meteor_rock_block",
+    "west": "reminisci:blocks/meteor_rock_block",
+    "particle": "reminisci:blocks/meteor_rock_block"
+  }
+}

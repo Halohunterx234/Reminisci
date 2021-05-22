@@ -1,0 +1,10 @@
+{
+  "_fv": 18,
+  "_type": "fuel",
+  "definition": {
+    "power": 10600,
+    "block": {
+      "value": "CUSTOM:GoldenCoal"
+    }
+  }
+}
