@@ -261,19 +261,155 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "chickenfarmdungeonlvl_1"
+    },
+    {
+      "name": "OveriteSword",
+      "type": "tool",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_sword"
+    },
+    {
+      "name": "OveriteSwordLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_sword_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OveriteSwordRecipe",
+      "type": "recipe",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_sword_recipe"
+    },
+    {
+      "name": "QuintessentialBlade",
+      "type": "tool",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_blade"
+    },
+    {
+      "name": "QuintessentialBladeRecipe",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_blade_recipe"
+    },
+    {
+      "name": "QuintessentialOrb",
+      "type": "mob",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_orb"
+    },
+    {
+      "name": "QuintessentialBladeEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_blade_entity_swings_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuintessentialBladeLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_blade_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "enchantment.reminisci.test": "Test",
-      "item.reminisci.golden_coal": "Golden Coal",
       "block.reminisci.dawrion_block": "Dawrion Ore",
+      "item.reminisci.golden_coal": "Golden Coal",
+      "item.reminisci.overite_scrap": "Overite Scrap",
+      "item.reminisci.quintessential_blade": "Overite Sword",
+      "entity.reminisci.quintessential_orb": "Quintessential Orb",
+      "enchantment.reminisci.test": "Test",
       "block.reminisci.meteor_rock": "Meteor Rock",
       "itemGroup.tabreminisci": "Reminisci",
+      "item.reminisci.overite_sword": "Overite Sword",
       "item.reminisci.overite_ingot": "Overite Ingot",
-      "item.reminisci.overite_scrap": "Overite Scrap",
+      "item.reminisci.quintessential_orb_spawn_egg": "Quintessential Orb Spawn Egg",
       "block.reminisci.earthly_debris": "Earthly Debris"
     }
   },

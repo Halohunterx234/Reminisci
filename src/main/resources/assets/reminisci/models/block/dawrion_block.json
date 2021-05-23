@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "reminisci:blocks/dawrion_block",
-    "up": "reminisci:blocks/dawrion_block",
-    "north": "reminisci:blocks/dawrion_block",
-    "east": "reminisci:blocks/dawrion_block",
-    "south": "reminisci:blocks/dawrion_block",
-    "west": "reminisci:blocks/dawrion_block",
-    "particle": "reminisci:blocks/dawrion_block_particle"
+    "down": "reminisci:blocks/dorito",
+    "up": "reminisci:blocks/dorito",
+    "north": "reminisci:blocks/doritoo",
+    "east": "reminisci:blocks/doritoooooo",
+    "south": "reminisci:blocks/doritoooo",
+    "west": "reminisci:blocks/doritooo",
+    "particle": "reminisci:blocks/dd"
   }
 }

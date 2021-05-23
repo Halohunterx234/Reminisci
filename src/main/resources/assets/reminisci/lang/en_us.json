@@ -1,10 +1,14 @@
 {
-  "enchantment.reminisci.test": "Test",
-  "item.reminisci.golden_coal": "Golden Coal",
   "block.reminisci.dawrion_block": "Dawrion Ore",
+  "item.reminisci.golden_coal": "Golden Coal",
+  "item.reminisci.overite_scrap": "Overite Scrap",
+  "item.reminisci.quintessential_blade": "Overite Sword",
+  "entity.reminisci.quintessential_orb": "Quintessential Orb",
+  "enchantment.reminisci.test": "Test",
   "block.reminisci.meteor_rock": "Meteor Rock",
   "itemGroup.tabreminisci": "Reminisci",
+  "item.reminisci.overite_sword": "Overite Sword",
   "item.reminisci.overite_ingot": "Overite Ingot",
-  "item.reminisci.overite_scrap": "Overite Scrap",
+  "item.reminisci.quintessential_orb_spawn_egg": "Quintessential Orb Spawn Egg",
   "block.reminisci.earthly_debris": "Earthly Debris"
 }
