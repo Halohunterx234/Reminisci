@@ -28,20 +28,19 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
 
-import net.mcreator.reminisci.procedures.SmallMeteorOnStructureInstanceGeneratedProcedure;
 import net.mcreator.reminisci.ReminisciModElements;
 
 import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
 
 @ReminisciModElements.ModElement.Tag
-public class SmallMeteorStructure extends ReminisciModElements.ModElement {
+public class DeadoaktreeStructure extends ReminisciModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
-	public SmallMeteorStructure(ReminisciModElements instance) {
-		super(instance, 11);
+	public DeadoaktreeStructure(ReminisciModElements instance) {
+		super(instance, 20);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -65,29 +64,32 @@ public class SmallMeteorStructure extends ReminisciModElements.ModElement {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
 							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
-							j += random.nextInt(50) + 16;
-							Rotation rotation = Rotation.NONE;
-							Mirror mirror = Mirror.NONE;
-							BlockPos spawnTo = new BlockPos(i + 0, j + 50, k + 0);
+							j -= 1;
+							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
+							boolean blockCriteria = false;
+							if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
+								blockCriteria = true;
+							if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
+								blockCriteria = true;
+							if (blockAt.getBlock() == Blocks.COARSE_DIRT.getDefaultState().getBlock())
+								blockCriteria = true;
+							if (blockAt.getBlock() == Blocks.PODZOL.getDefaultState().getBlock())
+								blockCriteria = true;
+							if (!blockCriteria)
+								continue;
+							Rotation rotation = Rotation.values()[random.nextInt(3)];
+							Mirror mirror = Mirror.values()[random.nextInt(2)];
+							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
 							Template template = world.getWorld().getStructureTemplateManager()
-									.getTemplateDefaulted(new ResourceLocation("reminisci", "meteor_small"));
+									.getTemplateDefaulted(new ResourceLocation("reminisci", "dead_oak_tree"));
 							if (template == null)
 								return false;
-							template.func_237144_a_(world, spawnTo,
-									new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
-											.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false),
+							template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
+									.addProcessor(BlockIgnoreStructureProcessor.AIR_AND_STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false),
 									random);
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								$_dependencies.put("world", world);
-								SmallMeteorOnStructureInstanceGeneratedProcedure.executeProcedure($_dependencies);
-							}
 						}
 					}
 					return true;
@@ -95,12 +97,19 @@ public class SmallMeteorStructure extends ReminisciModElements.ModElement {
 			};
 			configuredFeature = feature.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
 					.withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG));
-			event.getRegistry().register(feature.setRegistryName("small_meteor"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("reminisci:small_meteor"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("deadoaktree"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("reminisci:deadoaktree"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getGeneration().getFeatures(GenerationStage.Decoration.RAW_GENERATION).add(() -> configuredFeature);
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("plains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("desert").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);
 	}
 }

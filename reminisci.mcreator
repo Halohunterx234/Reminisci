@@ -171,16 +171,110 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "small_meteor"
+    },
+    {
+      "name": "EarthlyDebris",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "earthly_debris"
+    },
+    {
+      "name": "OveriteScrap",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_scrap"
+    },
+    {
+      "name": "OveriteScrapRecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_scrap_recipe"
+    },
+    {
+      "name": "OveriteIngot",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_ingot"
+    },
+    {
+      "name": "OveriteIngotRecipe",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_ingot_recipe"
+    },
+    {
+      "name": "Test",
+      "type": "enchantment",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test"
+    },
+    {
+      "name": "Ongroundsmalloredeposit",
+      "type": "structure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ongroundsmalloredeposit"
+    },
+    {
+      "name": "DungeonLvl1",
+      "type": "loottable",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dungeon_lvl_1"
+    },
+    {
+      "name": "Deadoaktree",
+      "type": "structure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "deadoaktree"
+    },
+    {
+      "name": "Chickenfarmdungeonlvl1",
+      "type": "structure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chickenfarmdungeonlvl_1"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "enchantment.reminisci.test": "Test",
       "item.reminisci.golden_coal": "Golden Coal",
       "block.reminisci.dawrion_block": "Dawrion Ore",
       "block.reminisci.meteor_rock": "Meteor Rock",
-      "itemGroup.tabreminisci": "Reminisci"
+      "itemGroup.tabreminisci": "Reminisci",
+      "item.reminisci.overite_ingot": "Overite Ingot",
+      "item.reminisci.overite_scrap": "Overite Scrap",
+      "block.reminisci.earthly_debris": "Earthly Debris"
     }
   },
   "foldersRoot": {

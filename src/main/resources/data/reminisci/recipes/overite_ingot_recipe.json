@@ -1,0 +1,39 @@
+{
+  "group": "reminisci",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "67 "
+  ],
+  "key": {
+    "0": {
+      "item": "reminisci:overite_scrap"
+    },
+    "1": {
+      "item": "reminisci:overite_scrap"
+    },
+    "2": {
+      "item": "reminisci:overite_scrap"
+    },
+    "3": {
+      "item": "reminisci:overite_scrap"
+    },
+    "4": {
+      "item": "minecraft:iron_ingot"
+    },
+    "5": {
+      "item": "minecraft:iron_ingot"
+    },
+    "6": {
+      "item": "minecraft:iron_ingot"
+    },
+    "7": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "reminisci:overite_ingot",
+    "count": 1
+  }
+}

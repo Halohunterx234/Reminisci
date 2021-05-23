@@ -1,0 +1,12 @@
+{
+  "group": "reminisci",
+  "type": "minecraft:smelting",
+  "experience": 1.5,
+  "cookingtime": 750,
+  "ingredient": {
+    "item": "reminisci:earthly_debris"
+  },
+  "result": {
+    "item": "reminisci:overite_scrap"
+  }
+}

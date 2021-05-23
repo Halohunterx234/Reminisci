@@ -1,6 +1,10 @@
 {
+  "enchantment.reminisci.test": "Test",
   "item.reminisci.golden_coal": "Golden Coal",
   "block.reminisci.dawrion_block": "Dawrion Ore",
   "block.reminisci.meteor_rock": "Meteor Rock",
-  "itemGroup.tabreminisci": "Reminisci"
+  "itemGroup.tabreminisci": "Reminisci",
+  "item.reminisci.overite_ingot": "Overite Ingot",
+  "item.reminisci.overite_scrap": "Overite Scrap",
+  "block.reminisci.earthly_debris": "Earthly Debris"
 }
