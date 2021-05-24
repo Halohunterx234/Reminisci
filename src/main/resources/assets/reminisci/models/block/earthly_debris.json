@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "reminisci:blocks/overite",
-    "up": "reminisci:blocks/overite",
-    "north": "reminisci:blocks/overite",
-    "east": "reminisci:blocks/overite",
-    "south": "reminisci:blocks/overite",
-    "west": "reminisci:blocks/overite",
-    "particle": "reminisci:blocks/overite"
+    "down": "reminisci:blocks/earthlydebris_bottom",
+    "up": "reminisci:blocks/earthlydebris_top",
+    "north": "reminisci:blocks/earthlydebris_front",
+    "east": "reminisci:blocks/earthlydebris_left",
+    "south": "reminisci:blocks/earthlydebris_back",
+    "west": "reminisci:blocks/earthlydebris_right",
+    "particle": "reminisci:blocks/whatsapp_image_2021-05-24_at_11.59.30_am"
   }
 }

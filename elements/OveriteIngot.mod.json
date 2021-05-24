@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "netherite_ingot_je1",
+    "texture": "overite_ingot",
     "customModelName": "Normal",
     "name": "Overite Ingot",
     "rarity": "EPIC",

@@ -1,14 +1,15 @@
 {
+  "item.reminisci.quintessential_orb_minion_spawn_egg": "Quintessential Orb Minion Spawn Egg",
   "block.reminisci.dawrion_block": "Dawrion Ore",
   "item.reminisci.golden_coal": "Golden Coal",
-  "item.reminisci.overite_scrap": "Overite Scrap",
-  "item.reminisci.quintessential_blade": "Overite Sword",
-  "entity.reminisci.quintessential_orb": "Quintessential Orb",
-  "enchantment.reminisci.test": "Test",
+  "item.reminisci.overite_scrap": "Overite Fragment",
+  "entity.reminisci.quintessential_orb": "Grandeur Spirit of Light",
+  "item.reminisci.quintessential_blade": "Quintessential Blade",
   "block.reminisci.meteor_rock": "Meteor Rock",
   "itemGroup.tabreminisci": "Reminisci",
   "item.reminisci.overite_sword": "Overite Sword",
   "item.reminisci.overite_ingot": "Overite Ingot",
-  "item.reminisci.quintessential_orb_spawn_egg": "Quintessential Orb Spawn Egg",
+  "entity.reminisci.quintessential_orb_minion": "Quintessential Orb Minion",
+  "item.reminisci.quintessential_orb_spawn_egg": "Grandeur Spirit of Light Spawn Egg",
   "block.reminisci.earthly_debris": "Earthly Debris"
 }

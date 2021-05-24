@@ -3,9 +3,9 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "netherite_ingot_je1",
+    "texture": "quintessential_sword",
     "customModelName": "Normal",
-    "name": "Overite Sword",
+    "name": "Quintessential Blade",
     "specialInfo": [
       "Harnesses the power of the earth and hell"
     ],
@@ -25,8 +25,11 @@
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onRightClickedInAir": {
-      "name": "OveriteSwordLivingEntityIsHitWithTool"
+    "onEntityHitWith": {
+      "name": "QuintessentialBladeLivingEntityIsHitWithTool"
+    },
+    "onEntitySwing": {
+      "name": "QuintessentialBladeEntitySwingsItem"
     }
   }
 }

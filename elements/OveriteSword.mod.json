@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "netherite_ingot_je1",
+    "texture": "overite_sword",
     "customModelName": "Normal",
     "name": "Overite Sword",
     "specialInfo": [

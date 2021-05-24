@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "overite",
+    "texture": "overite_fragment",
     "customModelName": "Normal",
-    "name": "Overite Scrap",
+    "name": "Overite Fragment",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Reminisci"

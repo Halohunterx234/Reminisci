@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "reminisci:items/netherite_ingot_je1"
+    "layer0": "reminisci:items/overite_sword"
   }
 }
