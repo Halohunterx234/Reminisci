@@ -1,8 +1,9 @@
 package net.mcreator.reminisci.procedures;
 
-import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.world.Explosion;
+import net.minecraft.particles.ParticleTypes;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.Entity;
 
 import net.mcreator.reminisci.ReminisciModElements;
 import net.mcreator.reminisci.ReminisciMod;
@@ -16,6 +17,11 @@ public class QuintessentialOrbMinionEntityDiesProcedure extends ReminisciModElem
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				ReminisciMod.LOGGER.warn("Failed to load dependency entity for procedure QuintessentialOrbMinionEntityDies!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				ReminisciMod.LOGGER.warn("Failed to load dependency x for procedure QuintessentialOrbMinionEntityDies!");
@@ -36,12 +42,12 @@ public class QuintessentialOrbMinionEntityDiesProcedure extends ReminisciModElem
 				ReminisciMod.LOGGER.warn("Failed to load dependency world for procedure QuintessentialOrbMinionEntityDies!");
 			return;
 		}
+		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof World && !((World) world).isRemote) {
-			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 2, Explosion.Mode.BREAK);
-		}
+		((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null).setFire((int) 1);
+		world.addParticle(ParticleTypes.END_ROD, x, y, z, 0, 1, 0);
 	}
 }

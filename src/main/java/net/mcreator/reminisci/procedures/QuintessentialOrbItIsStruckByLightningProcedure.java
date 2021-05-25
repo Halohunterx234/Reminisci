@@ -9,7 +9,7 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.reminisci.entity.QuintessentialOrbMinionEntity;
+import net.mcreator.reminisci.entity.QuintessentialOrbWarriorEntity;
 import net.mcreator.reminisci.ReminisciModElements;
 import net.mcreator.reminisci.ReminisciMod;
 
@@ -47,15 +47,7 @@ public class QuintessentialOrbItIsStruckByLightningProcedure extends ReminisciMo
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new QuintessentialOrbMinionEntity.CustomEntity(QuintessentialOrbMinionEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new QuintessentialOrbMinionEntity.CustomEntity(QuintessentialOrbMinionEntity.entity, (World) world);
+			Entity entityToSpawn = new QuintessentialOrbWarriorEntity.CustomEntity(QuintessentialOrbWarriorEntity.entity, (World) world);
 			entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 			if (entityToSpawn instanceof MobEntity)
 				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),

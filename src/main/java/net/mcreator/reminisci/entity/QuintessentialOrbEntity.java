@@ -30,6 +30,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
@@ -85,10 +86,10 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5);
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 300);
-			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 1);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 4);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 3);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 5);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -100,7 +101,7 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 
 		public CustomEntity(EntityType<CustomEntity> type, World world) {
 			super(type, world);
-			experienceValue = 0;
+			experienceValue = 10;
 			setNoAI(false);
 			setCustomName(new StringTextComponent("Lucius - Defender of Light"));
 			setCustomNameVisible(true);
@@ -114,11 +115,12 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true));
-			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.8));
-			this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
+			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, true));
+			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8));
+			this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
 		}
 
 		@Override
@@ -168,6 +170,10 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				QuintessentialOrbEntityIsHurtProcedure.executeProcedure($_dependencies);
 			}
 			if (source == DamageSource.LIGHTNING_BOLT)
