@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:overite_axe"
+  },
+  "addition": {
+    "item": "minecraft:netherite_axe"
+  },
+  "result": {
+    "item": "reminisci:quintessential_axe"
+  }
+}

@@ -12,10 +12,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 
+import net.mcreator.reminisci.procedures.QuintessentialBladeToolInHandTickProcedure;
 import net.mcreator.reminisci.procedures.QuintessentialBladeLivingEntityIsHitWithToolProcedure;
-import net.mcreator.reminisci.procedures.QuintessentialBladeEntitySwingsItemProcedure;
 import net.mcreator.reminisci.itemgroup.ReminisciItemGroup;
 import net.mcreator.reminisci.ReminisciModElements;
 
@@ -35,7 +36,7 @@ public class QuintessentialBladeItem extends ReminisciModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new SwordItem(new IItemTier() {
 			public int getMaxUses() {
-				return 100;
+				return 3000;
 			}
 
 			public float getEfficiency() {
@@ -43,7 +44,7 @@ public class QuintessentialBladeItem extends ReminisciModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 5.5f;
+				return 7f;
 			}
 
 			public int getHarvestLevel() {
@@ -51,13 +52,13 @@ public class QuintessentialBladeItem extends ReminisciModElements.ModElement {
 			}
 
 			public int getEnchantability() {
-				return 2;
+				return 20;
 			}
 
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.4f, new Item.Properties().group(ReminisciItemGroup.tab).isImmuneToFire()) {
+		}, 3, -2f, new Item.Properties().group(ReminisciItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
@@ -80,18 +81,16 @@ public class QuintessentialBladeItem extends ReminisciModElements.ModElement {
 			}
 
 			@Override
-			public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
-				boolean retval = super.onEntitySwing(itemstack, entity);
+			public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
+				super.inventoryTick(itemstack, world, entity, slot, selected);
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				World world = entity.world;
-				{
+				if (selected) {
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
-					QuintessentialBladeEntitySwingsItemProcedure.executeProcedure($_dependencies);
+					QuintessentialBladeToolInHandTickProcedure.executeProcedure($_dependencies);
 				}
-				return retval;
 			}
 		}.setRegistryName("quintessential_blade"));
 	}

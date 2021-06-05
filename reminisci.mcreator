@@ -536,27 +536,317 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "quintessential_orb_warrior"
+    },
+    {
+      "name": "OveriteArmourBodyTickEvent",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_armour_body_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OveriteArmour",
+      "type": "armor",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_armour",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "QuintessentialPickaxe",
+      "type": "tool",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_pickaxe"
+    },
+    {
+      "name": "QuintessentialAxe",
+      "type": "tool",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_axe"
+    },
+    {
+      "name": "QuintessentialShovel",
+      "type": "tool",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_shovel"
+    },
+    {
+      "name": "QuintessentialHoe",
+      "type": "tool",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_hoe"
+    },
+    {
+      "name": "OveritePickaxe",
+      "type": "tool",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_pickaxe"
+    },
+    {
+      "name": "OveriteAxe",
+      "type": "tool",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_axe"
+    },
+    {
+      "name": "OveriteShovel",
+      "type": "tool",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_shovel"
+    },
+    {
+      "name": "OveriteHoe",
+      "type": "tool",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_hoe"
+    },
+    {
+      "name": "OveritePickaxeRecipe",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_pickaxe_recipe"
+    },
+    {
+      "name": "OveriteAxeRecipe",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_axe_recipe"
+    },
+    {
+      "name": "OveriteShovelRecipe",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_shovel_recipe"
+    },
+    {
+      "name": "OveriteHoeRecipe",
+      "type": "recipe",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_hoe_recipe"
+    },
+    {
+      "name": "QuintessentialPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_pickaxe_recipe"
+    },
+    {
+      "name": "QuintessentialAxeRecipe",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_axe_recipe"
+    },
+    {
+      "name": "QuintessentialShovelRecipe",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_shovel_recipe"
+    },
+    {
+      "name": "QuintessentialHoeRecipe",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_hoe_recipe"
+    },
+    {
+      "name": "QuintessentialPickaxeToolInHandTick",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_pickaxe_tool_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuintessentialAxeToolInHandTick",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_axe_tool_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuintessentialShovelToolInHandTick",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_shovel_tool_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuintessentialHoeToolInHandTick",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_hoe_tool_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuintessentialBladeToolInHandTick",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_blade_tool_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OveriteSwordToolInHandTick",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_sword_tool_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.reminisci.quintessential_orb_minion_spawn_egg": "Quintessential Orb Archer Spawn Egg",
-      "item.reminisci.golden_coal": "Golden Coal",
+      "item.reminisci.overite_armour_chestplate": "Overite Armour Body",
       "block.reminisci.dawrion_block": "Dawrion Ore",
-      "item.reminisci.overite_scrap": "Overite Fragment",
+      "item.reminisci.golden_coal": "Golden Coal",
       "item.reminisci.quintessential_blade": "Quintessential Blade",
       "entity.reminisci.quintessential_orb": "Grandeur Spirit of Light",
-      "entity.reminisci.quintessential_orb_warrior": "Quintessential Orb Warrior",
+      "item.reminisci.overite_axe": "Overite Axe",
+      "item.reminisci.quintessential_hoe": "Quintessential Hoe",
       "item.reminisci.quintessential_orb_warrior_spawn_egg": "Quintessential Orb Warrior Spawn Egg",
-      "block.reminisci.meteor_rock": "Meteor Rock",
       "itemGroup.tabreminisci": "Reminisci",
+      "item.reminisci.quintessential_orb_spawn_egg": "Grandeur Spirit of Light Spawn Egg",
+      "item.reminisci.quintessential_pickaxe": "Quintessential Pickaxe",
+      "item.reminisci.overite_hoe": "Overite Hoe",
+      "block.reminisci.earthly_debris": "Earthly Debris",
+      "item.reminisci.quintessential_axe": "Quintessential Axe",
+      "item.reminisci.quintessential_orb_minion_spawn_egg": "Quintessential Orb Archer Spawn Egg",
+      "item.reminisci.overite_shovel": "Overite Shovel",
+      "item.reminisci.overite_armour_leggings": "Overite Armour Leggings",
+      "item.reminisci.overite_armour_boots": "Overite Armour Boots",
+      "item.reminisci.overite_armour_helmet": "Overite Armour Helmet",
+      "item.reminisci.overite_pickaxe": "Overite Pickaxe",
+      "item.reminisci.overite_scrap": "Overite Fragment",
+      "entity.reminisci.quintessential_orb_warrior": "Quintessential Orb Warrior",
+      "item.reminisci.quintessential_shovel": "Quintessential Shovel",
+      "block.reminisci.meteor_rock": "Meteor Rock",
       "item.reminisci.overite_sword": "Overite Sword",
       "item.reminisci.overite_ingot": "Overite Ingot",
-      "entity.reminisci.quintessential_orb_minion": "Quintessential Orb Archer",
-      "item.reminisci.quintessential_orb_spawn_egg": "Grandeur Spirit of Light Spawn Egg",
-      "block.reminisci.earthly_debris": "Earthly Debris"
+      "entity.reminisci.quintessential_orb_minion": "Quintessential Orb Archer"
     }
   },
   "foldersRoot": {

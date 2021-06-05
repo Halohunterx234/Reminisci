@@ -29,5 +29,6 @@ public class QuintessentialOrbMinionEntityIsHurtProcedure extends ReminisciModEl
 		if (((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof LivingEntity)
 			((LivingEntity) ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null))
 					.addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 120, (int) 2));
+		((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null).setFire((int) 1);
 	}
 }

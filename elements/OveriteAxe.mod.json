@@ -1,0 +1,27 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "overitee_axe",
+    "customModelName": "Normal",
+    "name": "Overite Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Reminisci"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 0,
+    "efficiency": 8.5,
+    "attackSpeed": 1.0,
+    "enchantability": 12,
+    "damageVsEntity": 9.5,
+    "usageCount": 1796,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -15,10 +15,10 @@
     "toolType": "Sword",
     "harvestLevel": 0,
     "efficiency": 0.0,
-    "attackSpeed": 1.6,
-    "enchantability": 2,
-    "damageVsEntity": 7.5,
-    "usageCount": 100,
+    "attackSpeed": 2.0,
+    "enchantability": 20,
+    "damageVsEntity": 9.0,
+    "usageCount": 3000,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [],
@@ -28,8 +28,8 @@
     "onEntityHitWith": {
       "name": "QuintessentialBladeLivingEntityIsHitWithTool"
     },
-    "onEntitySwing": {
-      "name": "QuintessentialBladeEntitySwingsItem"
+    "onItemInUseTick": {
+      "name": "QuintessentialBladeToolInHandTick"
     }
   }
 }

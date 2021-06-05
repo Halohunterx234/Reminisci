@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:overite_hoe"
+  },
+  "addition": {
+    "item": "minecraft:netherite_hoe"
+  },
+  "result": {
+    "item": "reminisci:quintessential_hoe"
+  }
+}

@@ -19,7 +19,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.entity.projectile.ArrowEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -106,7 +105,7 @@ public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElem
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, true));
+			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, QuintessentialOrbEntity.CustomEntity.class, false, true));
 			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false));
 			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 1));
 			this.targetSelector.addGoal(5, new HurtByTargetGoal(this));

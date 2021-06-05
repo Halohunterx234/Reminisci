@@ -64,7 +64,7 @@ public class QuintessentialOrbEntityIsHurtProcedure extends ReminisciModElements
 				? ((LivingEntity) entity).getHealth()
 				: -1) > (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 2))) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NAUSEA, (int) 60, (int) 3));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.BLINDNESS, (int) 60, (int) 3));
 		} else if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getHealth()
 				: -1) < (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 2))) {

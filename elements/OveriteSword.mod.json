@@ -27,6 +27,9 @@
     "damageOnCrafting": false,
     "onRightClickedInAir": {
       "name": "OveriteSwordLivingEntityIsHitWithTool"
+    },
+    "onItemInUseTick": {
+      "name": "OveriteSwordToolInHandTick"
     }
   }
 }

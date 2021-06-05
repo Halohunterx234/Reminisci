@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:overite_pickaxe"
+  },
+  "addition": {
+    "item": "minecraft:netherite_pickaxe"
+  },
+  "result": {
+    "item": "reminisci:quintessential_pickaxe"
+  }
+}

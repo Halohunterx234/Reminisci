@@ -1,0 +1,30 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "quintessential_pickaxe",
+    "customModelName": "Normal",
+    "name": "Quintessential Pickaxe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Reminisci"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 5,
+    "efficiency": 11.0,
+    "attackSpeed": 1.5,
+    "enchantability": 20,
+    "damageVsEntity": 5.5,
+    "usageCount": 3000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "QuintessentialPickaxeToolInHandTick"
+    }
+  }
+}

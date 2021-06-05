@@ -1,0 +1,30 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "quintessential_hoe",
+    "customModelName": "Normal",
+    "name": "Quintessential Hoe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Reminisci"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 1,
+    "efficiency": 11.0,
+    "attackSpeed": 1.5,
+    "enchantability": 20,
+    "damageVsEntity": 2.0,
+    "usageCount": 3000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "QuintessentialHoeToolInHandTick"
+    }
+  }
+}

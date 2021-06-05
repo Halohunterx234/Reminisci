@@ -1,0 +1,27 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "overitee_hoe",
+    "customModelName": "Normal",
+    "name": "Overite Hoe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Reminisci"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 0,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 12,
+    "damageVsEntity": 1.0,
+    "usageCount": 1796,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "quintessential_shovel",
+    "customModelName": "Normal",
+    "name": "Quintessential Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Reminisci"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 1,
+    "efficiency": 11.0,
+    "attackSpeed": 1.5,
+    "enchantability": 20,
+    "damageVsEntity": 7.5,
+    "usageCount": 3000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "QuintessentialShovelToolInHandTick"
+    }
+  }
+}
