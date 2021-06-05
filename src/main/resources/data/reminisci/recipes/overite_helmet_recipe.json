@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_helmet"
+  },
+  "addition": {
+    "item": "reminisci:overite_ingot"
+  },
+  "result": {
+    "item": "reminisci:overite_armour_helmet"
+  }
+}

@@ -4,9 +4,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.BoneMealItem;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
 
 import net.mcreator.reminisci.ReminisciModElements;
 import net.mcreator.reminisci.ReminisciMod;
@@ -20,6 +25,11 @@ public class OveriteSwordLivingEntityIsHitWithToolProcedure extends ReminisciMod
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				ReminisciMod.LOGGER.warn("Failed to load dependency entity for procedure OveriteSwordLivingEntityIsHitWithTool!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				ReminisciMod.LOGGER.warn("Failed to load dependency x for procedure OveriteSwordLivingEntityIsHitWithTool!");
@@ -40,6 +50,7 @@ public class OveriteSwordLivingEntityIsHitWithToolProcedure extends ReminisciMod
 				ReminisciMod.LOGGER.warn("Failed to load dependency world for procedure OveriteSwordLivingEntityIsHitWithTool!");
 			return;
 		}
+		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
@@ -83,5 +94,10 @@ public class OveriteSwordLivingEntityIsHitWithToolProcedure extends ReminisciMod
 					((World) world).playEvent(2005, new BlockPos((int) x, (int) y, (int) (z + 1)), 0);
 			}
 		}
+		if (((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof LivingEntity)
+			((LivingEntity) ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null))
+					.addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 100, (int) 0.5));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.BLINDNESS, (int) 100, (int) 0.5));
 	}
 }

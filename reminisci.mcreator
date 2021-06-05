@@ -273,6 +273,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -814,6 +818,42 @@
           }
         ]
       }
+    },
+    {
+      "name": "OveriteHelmetRecipe",
+      "type": "recipe",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_helmet_recipe"
+    },
+    {
+      "name": "OveriteChestRecipe",
+      "type": "recipe",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_chest_recipe"
+    },
+    {
+      "name": "OveriteLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_leggings_recipe"
+    },
+    {
+      "name": "OveriteBootsRecipe",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overite_boots_recipe"
     }
   ],
   "variable_elements": [],
@@ -821,8 +861,8 @@
   "language_map": {
     "en_us": {
       "item.reminisci.overite_armour_chestplate": "Overite Armour Body",
-      "block.reminisci.dawrion_block": "Dawrion Ore",
       "item.reminisci.golden_coal": "Golden Coal",
+      "block.reminisci.dawrion_block": "Dawrion Ore",
       "item.reminisci.quintessential_blade": "Quintessential Blade",
       "entity.reminisci.quintessential_orb": "Grandeur Spirit of Light",
       "item.reminisci.overite_axe": "Overite Axe",
