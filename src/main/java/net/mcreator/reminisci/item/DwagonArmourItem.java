@@ -6,7 +6,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.ItemStack;
@@ -14,28 +13,23 @@ import net.minecraft.item.Item;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.reminisci.procedures.OveriteArmourBodyTickEventProcedure;
 import net.mcreator.reminisci.itemgroup.ReminisciItemGroup;
 import net.mcreator.reminisci.ReminisciModElements;
 
-import java.util.Map;
-import java.util.HashMap;
-
 @ReminisciModElements.ModElement.Tag
-public class OveriteArmourItem extends ReminisciModElements.ModElement {
-	@ObjectHolder("reminisci:overite_armour_helmet")
+public class DwagonArmourItem extends ReminisciModElements.ModElement {
+	@ObjectHolder("reminisci:dwagon_armour_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("reminisci:overite_armour_chestplate")
+	@ObjectHolder("reminisci:dwagon_armour_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("reminisci:overite_armour_leggings")
+	@ObjectHolder("reminisci:dwagon_armour_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("reminisci:overite_armour_boots")
+	@ObjectHolder("reminisci:dwagon_armour_boots")
 	public static final Item boots = null;
-	public OveriteArmourItem(ReminisciModElements instance) {
-		super(instance, 36);
+	public DwagonArmourItem(ReminisciModElements instance) {
+		super(instance, 69);
 	}
 
 	@Override
@@ -43,22 +37,22 @@ public class OveriteArmourItem extends ReminisciModElements.ModElement {
 		IArmorMaterial armormaterial = new IArmorMaterial() {
 			@Override
 			public int getDurability(EquipmentSlotType slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 35;
+				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 70;
 			}
 
 			@Override
 			public int getDamageReductionAmount(EquipmentSlotType slot) {
-				return new int[]{3, 6, 8, 3}[slot.getIndex()];
+				return new int[]{6, 8, 10, 6}[slot.getIndex()];
 			}
 
 			@Override
 			public int getEnchantability() {
-				return 9;
+				return 30;
 			}
 
 			@Override
 			public net.minecraft.util.SoundEvent getSoundEvent() {
-				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ender_dragon.growl"));
 			}
 
 			@Override
@@ -69,54 +63,42 @@ public class OveriteArmourItem extends ReminisciModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public String getName() {
-				return "overite_armour";
+				return "dwagon_armour";
 			}
 
 			@Override
 			public float getToughness() {
-				return 2.5f;
+				return 6.5f;
 			}
 
 			@Override
 			public float getKnockbackResistance() {
-				return 0.05f;
+				return 0.6f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(ReminisciItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "reminisci:textures/models/armor/overite_armour__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "reminisci:textures/models/armor/dragon__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("overite_armour_helmet"));
+		}.setRegistryName("dwagon_armour_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(ReminisciItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "reminisci:textures/models/armor/overite_armour__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "reminisci:textures/models/armor/dragon__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-
-			@Override
-			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
-				double x = entity.getPosX();
-				double y = entity.getPosY();
-				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					OveriteArmourBodyTickEventProcedure.executeProcedure($_dependencies);
-				}
-			}
-		}.setRegistryName("overite_armour_chestplate"));
+		}.setRegistryName("dwagon_armour_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(ReminisciItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "reminisci:textures/models/armor/overite_armour__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "reminisci:textures/models/armor/dragon__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("overite_armour_leggings"));
+		}.setRegistryName("dwagon_armour_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ReminisciItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "reminisci:textures/models/armor/overite_armour__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "reminisci:textures/models/armor/dragon__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("overite_armour_boots"));
+		}.setRegistryName("dwagon_armour_boots"));
 	}
 }

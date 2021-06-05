@@ -854,6 +854,206 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "overite_boots_recipe"
+    },
+    {
+      "name": "TheDwagonAIOT",
+      "type": "tool",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "the_dwagon_aiot"
+    },
+    {
+      "name": "DwagonScale",
+      "type": "item",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_scale"
+    },
+    {
+      "name": "DwagonScaleRecipe",
+      "type": "recipe",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_scale_recipe"
+    },
+    {
+      "name": "TheDwagonAIOTRecipe",
+      "type": "recipe",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "the_dwagon_aiot_recipe"
+    },
+    {
+      "name": "QuintessentialArmour",
+      "type": "armor",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_armour",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "QuintessentialArmourBodyTickEvent",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_armour_body_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DawrionArmour",
+      "type": "armor",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dawrion_armour",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "DawrionArmourBodyTickEvent",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dawrion_armour_body_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DwagonScytheRightClickedInAir",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_scythe_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DwagonScythe",
+      "type": "tool",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_scythe"
+    },
+    {
+      "name": "DwagonArmour",
+      "type": "armor",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_armour",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "DwagonArmourBodyTickEvent",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_armour_body_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SummonEnderDragon",
+      "type": "mob",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "summon_ender_dragon"
+    },
+    {
+      "name": "DwagonArmourLeggingsTickEvent",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_armour_leggings_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -861,28 +1061,45 @@
   "language_map": {
     "en_us": {
       "item.reminisci.overite_armour_chestplate": "Overite Armour Body",
-      "item.reminisci.golden_coal": "Golden Coal",
       "block.reminisci.dawrion_block": "Dawrion Ore",
+      "item.reminisci.golden_coal": "Golden Coal",
+      "item.reminisci.quintessential_armour_boots": "Quintessential Armour Boots",
+      "item.reminisci.dwagon_armour_helmet": "Dwagon Armour Helmet",
+      "entity.reminisci.summon_ender_dragon": "Dwagon\u0027s Pet Ghast",
       "item.reminisci.quintessential_blade": "Quintessential Blade",
       "entity.reminisci.quintessential_orb": "Grandeur Spirit of Light",
       "item.reminisci.overite_axe": "Overite Axe",
+      "item.reminisci.quintessential_armour_leggings": "Quintessential Armour Leggings",
+      "item.reminisci.dwagon_armour_chestplate": "Dwagon Armour Body",
       "item.reminisci.quintessential_hoe": "Quintessential Hoe",
       "item.reminisci.quintessential_orb_warrior_spawn_egg": "Quintessential Orb Warrior Spawn Egg",
+      "item.reminisci.dawrion_armour_chestplate": "Dawrion Armour Body",
       "itemGroup.tabreminisci": "Reminisci",
+      "item.reminisci.dwagon_scale": "Dwagon Scale",
+      "item.reminisci.dwagon_armour_leggings": "Dwagon Armour Leggings",
+      "item.reminisci.dawrion_armour_leggings": "Dawrion Armour Leggings",
       "item.reminisci.quintessential_orb_spawn_egg": "Grandeur Spirit of Light Spawn Egg",
       "item.reminisci.quintessential_pickaxe": "Quintessential Pickaxe",
       "item.reminisci.overite_hoe": "Overite Hoe",
+      "item.reminisci.dawrion_armour_helmet": "Dawrion Armour Helmet",
       "block.reminisci.earthly_debris": "Earthly Debris",
+      "item.reminisci.quintessential_armour_chestplate": "Quintessential Armour Body",
+      "item.reminisci.the_dwagon_aiot": "The Dwagon AIOT",
       "item.reminisci.quintessential_axe": "Quintessential Axe",
       "item.reminisci.quintessential_orb_minion_spawn_egg": "Quintessential Orb Archer Spawn Egg",
       "item.reminisci.overite_shovel": "Overite Shovel",
       "item.reminisci.overite_armour_leggings": "Overite Armour Leggings",
       "item.reminisci.overite_armour_boots": "Overite Armour Boots",
+      "item.reminisci.summon_ender_dragon_spawn_egg": "Dwagon\u0027s Pet Ghast Spawn Egg",
       "item.reminisci.overite_armour_helmet": "Overite Armour Helmet",
       "item.reminisci.overite_pickaxe": "Overite Pickaxe",
+      "item.reminisci.dwagon_armour_boots": "Dwagon Armour Boots",
       "item.reminisci.overite_scrap": "Overite Fragment",
+      "item.reminisci.quintessential_armour_helmet": "Quintessential Armour Helmet",
       "entity.reminisci.quintessential_orb_warrior": "Quintessential Orb Warrior",
+      "item.reminisci.dawrion_armour_boots": "Dawrion Armour Boots",
       "item.reminisci.quintessential_shovel": "Quintessential Shovel",
+      "item.reminisci.dwagon_scythe": "Chaotic Scythe",
       "block.reminisci.meteor_rock": "Meteor Rock",
       "item.reminisci.overite_sword": "Overite Sword",
       "item.reminisci.overite_ingot": "Overite Ingot",

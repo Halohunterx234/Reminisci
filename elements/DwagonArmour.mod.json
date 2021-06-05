@@ -3,24 +3,21 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "overite_head",
+    "textureHelmet": "dwagonarmour_head",
     "enableBody": true,
-    "textureBody": "overite_body",
+    "textureBody": "dwagonarmour_body",
     "enableLeggings": true,
-    "textureLeggings": "overite_leggings",
+    "textureLeggings": "dwagonarmour_leggings",
     "enableBoots": true,
-    "textureBoots": "overite_boots",
-    "onBodyTick": {
-      "name": "OveriteArmourBodyTickEvent"
-    },
+    "textureBoots": "dwagonarmour_boots",
     "creativeTab": {
       "value": "CUSTOM:Reminisci"
     },
-    "armorTextureFile": "overite_armour_",
-    "helmetName": "Overite Armour Helmet",
-    "bodyName": "Overite Armour Body",
-    "leggingsName": "Overite Armour Leggings",
-    "bootsName": "Overite Armour Boots",
+    "armorTextureFile": "dragon_",
+    "helmetName": "Dwagon Armour Helmet",
+    "bodyName": "Dwagon Armour Body",
+    "leggingsName": "Dwagon Armour Leggings",
+    "bootsName": "Dwagon Armour Boots",
     "helmetSpecialInfo": [],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
@@ -41,16 +38,16 @@
     "bootsModelPartL": "Boots L",
     "bootsModelPartR": "Boots R",
     "bootsModelTexture": "From armor",
-    "maxDamage": 35,
-    "damageValueHelmet": 3,
-    "damageValueBody": 8,
-    "damageValueLeggings": 6,
-    "damageValueBoots": 3,
-    "enchantability": 9,
-    "toughness": 2.5,
-    "knockbackResistance": 0.05,
+    "maxDamage": 70,
+    "damageValueHelmet": 6,
+    "damageValueBody": 10,
+    "damageValueLeggings": 8,
+    "damageValueBoots": 6,
+    "enchantability": 30,
+    "toughness": 6.5,
+    "knockbackResistance": 0.6,
     "equipSound": {
-      "value": ""
+      "value": "entity.enderdragon.growl"
     },
     "repairItems": []
   }

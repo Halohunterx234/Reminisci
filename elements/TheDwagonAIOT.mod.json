@@ -1,0 +1,29 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "the_dwagon_",
+    "customModelName": "Normal",
+    "name": "The Dwagon AIOT",
+    "specialInfo": [
+      "Chaotic Energy Unleashed Through Pure Destruction"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Reminisci"
+    },
+    "toolType": "MultiTool",
+    "harvestLevel": 1,
+    "efficiency": 20.0,
+    "attackSpeed": 2.0,
+    "enchantability": 30,
+    "damageVsEntity": 4.0,
+    "usageCount": 9999,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

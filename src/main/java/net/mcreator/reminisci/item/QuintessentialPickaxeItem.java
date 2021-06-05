@@ -34,7 +34,7 @@ public class QuintessentialPickaxeItem extends ReminisciModElements.ModElement {
 			}
 
 			public float getEfficiency() {
-				return 11f;
+				return 12f;
 			}
 
 			public float getAttackDamage() {

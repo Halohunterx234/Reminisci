@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:quintessential_pickaxe"
+  },
+  "addition": {
+    "item": "reminisci:dwagon_scale"
+  },
+  "result": {
+    "item": "reminisci:the_dwagon_aiot"
+  }
+}

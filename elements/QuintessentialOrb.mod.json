@@ -98,9 +98,6 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "onStruckByLightning": {
-      "name": "QuintessentialOrbItIsStruckByLightning"
-    },
     "whenMobIsHurt": {
       "name": "QuintessentialOrbEntityIsHurt"
     },

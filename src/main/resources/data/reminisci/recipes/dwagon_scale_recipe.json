@@ -1,0 +1,42 @@
+{
+  "group": "reminisci",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:ender_eye"
+    },
+    "1": {
+      "item": "minecraft:dragon_breath"
+    },
+    "2": {
+      "item": "minecraft:nether_star"
+    },
+    "3": {
+      "item": "minecraft:dragon_breath"
+    },
+    "4": {
+      "item": "minecraft:dragon_egg"
+    },
+    "5": {
+      "item": "minecraft:dragon_breath"
+    },
+    "6": {
+      "item": "minecraft:blaze_powder"
+    },
+    "7": {
+      "item": "minecraft:dragon_breath"
+    },
+    "8": {
+      "item": "minecraft:prismarine_shard"
+    }
+  },
+  "result": {
+    "item": "reminisci:dwagon_scale",
+    "count": 1
+  }
+}

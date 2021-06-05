@@ -9,7 +9,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.server.ServerBossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.IServerWorld;
@@ -28,7 +27,6 @@ import net.minecraft.item.Item;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
@@ -47,7 +45,6 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.reminisci.procedures.QuintessentialOrbPlayerCollidesWithThisEntityProcedure;
 import net.mcreator.reminisci.procedures.QuintessentialOrbOnInitialEntitySpawnProcedure;
-import net.mcreator.reminisci.procedures.QuintessentialOrbItIsStruckByLightningProcedure;
 import net.mcreator.reminisci.procedures.QuintessentialOrbEntityIsHurtProcedure;
 import net.mcreator.reminisci.item.GoldenCoalItem;
 import net.mcreator.reminisci.entity.renderer.QuintessentialOrbRenderer;
@@ -141,23 +138,6 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-		}
-
-		@Override
-		public void func_241841_a(ServerWorld serverWorld, LightningBoltEntity entityLightningBolt) {
-			super.func_241841_a(serverWorld, entityLightningBolt);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				QuintessentialOrbItIsStruckByLightningProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override

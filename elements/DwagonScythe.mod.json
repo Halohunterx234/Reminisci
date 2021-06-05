@@ -1,0 +1,32 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "dwagonscythe",
+    "customModelName": "Normal",
+    "name": "Chaotic Scythe",
+    "specialInfo": [
+      "Chaotic Scythe"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Reminisci"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 0.8,
+    "enchantability": 20,
+    "damageVsEntity": 20.0,
+    "usageCount": 9999,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": true,
+    "onRightClickedInAir": {
+      "name": "DwagonScytheRightClickedInAir"
+    }
+  }
+}

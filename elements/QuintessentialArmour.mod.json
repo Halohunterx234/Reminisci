@@ -3,24 +3,24 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "overite_head",
+    "textureHelmet": "quintessentialarmourinventory_head",
     "enableBody": true,
-    "textureBody": "overite_body",
+    "textureBody": "quintessentialarmourinventory_body",
     "enableLeggings": true,
-    "textureLeggings": "overite_leggings",
+    "textureLeggings": "quintessentialarmourinventory_leggings",
     "enableBoots": true,
-    "textureBoots": "overite_boots",
+    "textureBoots": "quintessentialarmourinventory_boots",
     "onBodyTick": {
-      "name": "OveriteArmourBodyTickEvent"
+      "name": "QuintessentialArmourBodyTickEvent"
     },
     "creativeTab": {
       "value": "CUSTOM:Reminisci"
     },
-    "armorTextureFile": "overite_armour_",
-    "helmetName": "Overite Armour Helmet",
-    "bodyName": "Overite Armour Body",
-    "leggingsName": "Overite Armour Leggings",
-    "bootsName": "Overite Armour Boots",
+    "armorTextureFile": "quantum_",
+    "helmetName": "Quintessential Armour Helmet",
+    "bodyName": "Quintessential Armour Body",
+    "leggingsName": "Quintessential Armour Leggings",
+    "bootsName": "Quintessential Armour Boots",
     "helmetSpecialInfo": [],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
@@ -41,17 +41,21 @@
     "bootsModelPartL": "Boots L",
     "bootsModelPartR": "Boots R",
     "bootsModelTexture": "From armor",
-    "maxDamage": 35,
-    "damageValueHelmet": 3,
-    "damageValueBody": 8,
-    "damageValueLeggings": 6,
-    "damageValueBoots": 3,
-    "enchantability": 9,
-    "toughness": 2.5,
-    "knockbackResistance": 0.05,
+    "maxDamage": 45,
+    "damageValueHelmet": 4,
+    "damageValueBody": 9,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 4,
+    "enchantability": 20,
+    "toughness": 4.0,
+    "knockbackResistance": 0.2,
     "equipSound": {
       "value": ""
     },
-    "repairItems": []
+    "repairItems": [
+      {
+        "value": "CUSTOM:DwagonScale"
+      }
+    ]
   }
 }
