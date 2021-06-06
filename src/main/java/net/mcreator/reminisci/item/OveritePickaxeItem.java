@@ -35,7 +35,7 @@ public class OveritePickaxeItem extends ReminisciModElements.ModElement {
 			}
 
 			public int getHarvestLevel() {
-				return 1;
+				return 4;
 			}
 
 			public int getEnchantability() {

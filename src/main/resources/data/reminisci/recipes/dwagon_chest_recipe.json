@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:quintessential_armour_chestplate"
+  },
+  "addition": {
+    "item": "reminisci:dwagon_scale"
+  },
+  "result": {
+    "item": "reminisci:dwagon_armour_chestplate"
+  }
+}

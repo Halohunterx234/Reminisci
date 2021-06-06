@@ -5,7 +5,7 @@
     "mobName": "Grandeur Spirit of Light",
     "mobLabel": "Lucius - Defender of Light",
     "mobModelName": "Biped",
-    "mobModelTexture": "dawrion_block_particle.png",
+    "mobModelTexture": "969da8eb1e059ade2b8715f9b849022a32480392.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
@@ -77,7 +77,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:GoldenCoal"
+      "value": "CUSTOM:LightShard"
     },
     "livingSound": {
       "value": ""

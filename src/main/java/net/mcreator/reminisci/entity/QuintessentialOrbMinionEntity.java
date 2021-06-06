@@ -47,7 +47,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.reminisci.item.GoldenCoalItem;
+import net.mcreator.reminisci.item.LightDiskProjectileItem;
 import net.mcreator.reminisci.entity.renderer.QuintessentialOrbMinionRenderer;
 import net.mcreator.reminisci.ReminisciModElements;
 
@@ -90,6 +90,7 @@ public class QuintessentialOrbMinionEntity extends ReminisciModElements.ModEleme
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 20);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1);
 			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.3);
 			event.put(entity, ammma.create());
 		}
@@ -202,12 +203,12 @@ public class QuintessentialOrbMinionEntity extends ReminisciModElements.ModEleme
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(GoldenCoalItem.block, (int) (1));
+			return new ItemStack(LightDiskProjectileItem.block, (int) (1));
 		}
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return new ItemStack(GoldenCoalItem.block, (int) (1));
+			return new ItemStack(LightDiskProjectileItem.block, (int) (1));
 		}
 	}
 }

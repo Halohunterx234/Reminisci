@@ -1,0 +1,12 @@
+{
+  "group": "reminisci",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 1200,
+  "ingredient": {
+    "item": "reminisci:dawrion_block"
+  },
+  "result": {
+    "item": "reminisci:essenseof_dawn"
+  }
+}

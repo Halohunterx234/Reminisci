@@ -25,7 +25,7 @@ public class SummonEnderDragonRenderer {
 					renderManager -> new MobRenderer(renderManager, new GhastModel(), 0.5f) {
 						@Override
 						public ResourceLocation getEntityTexture(Entity entity) {
-							return new ResourceLocation("reminisci:textures/dawrion_block_particle.png");
+							return new ResourceLocation("reminisci:textures/texture.png");
 						}
 					});
 			RenderingRegistry.registerEntityRenderingHandler(SummonEnderDragonEntity.arrow,

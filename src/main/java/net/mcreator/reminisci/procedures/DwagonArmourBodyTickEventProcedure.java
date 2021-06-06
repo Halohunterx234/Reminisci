@@ -48,7 +48,6 @@ public class DwagonArmourBodyTickEventProcedure extends ReminisciModElements.Mod
 								: ItemStack.EMPTY).getItem() == new ItemStack(DwagonArmourItem.helmet, (int) (1)).getItem())))) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HEALTH_BOOST, (int) 300, (int) 2));
-			entity.setNoGravity((true));
 			if ((((entity instanceof LivingEntity)
 					? ((LivingEntity) entity).getHealth()
 					: -1) <= (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 2))) {

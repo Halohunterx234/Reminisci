@@ -26,7 +26,7 @@ public class QuintessentialOrbMinionRenderer {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("reminisci:textures/dawrion_block_particle.png");
+						return new ResourceLocation("reminisci:textures/9129e93503cc271d56d461064a0f8822d0640cac.png");
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

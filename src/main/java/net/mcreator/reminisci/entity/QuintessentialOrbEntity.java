@@ -46,7 +46,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.mcreator.reminisci.procedures.QuintessentialOrbPlayerCollidesWithThisEntityProcedure;
 import net.mcreator.reminisci.procedures.QuintessentialOrbOnInitialEntitySpawnProcedure;
 import net.mcreator.reminisci.procedures.QuintessentialOrbEntityIsHurtProcedure;
-import net.mcreator.reminisci.item.GoldenCoalItem;
+import net.mcreator.reminisci.item.LightShardItem;
 import net.mcreator.reminisci.entity.renderer.QuintessentialOrbRenderer;
 import net.mcreator.reminisci.ReminisciModElements;
 
@@ -127,7 +127,7 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 
 		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
 			super.dropSpecialItems(source, looting, recentlyHitIn);
-			this.entityDropItem(new ItemStack(GoldenCoalItem.block, (int) (1)));
+			this.entityDropItem(new ItemStack(LightShardItem.block, (int) (1)));
 		}
 
 		@Override

@@ -64,7 +64,7 @@ public class TheDwagonAIOTItem extends ReminisciModElements.ModElement {
 
 		@Override
 		public boolean canHarvestBlock(BlockState state) {
-			return 1 >= state.getHarvestLevel();
+			return 6 >= state.getHarvestLevel();
 		}
 
 		@Override

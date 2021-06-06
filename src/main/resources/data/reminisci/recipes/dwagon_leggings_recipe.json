@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:quintessential_armour_leggings"
+  },
+  "addition": {
+    "item": "reminisci:dwagon_scale"
+  },
+  "result": {
+    "item": "reminisci:dwagon_armour_leggings"
+  }
+}

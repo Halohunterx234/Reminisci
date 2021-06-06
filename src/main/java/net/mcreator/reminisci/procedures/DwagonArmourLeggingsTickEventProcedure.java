@@ -2,12 +2,12 @@ package net.mcreator.reminisci.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -22,8 +22,10 @@ import net.mcreator.reminisci.entity.SummonEnderDragonEntity;
 import net.mcreator.reminisci.ReminisciModElements;
 import net.mcreator.reminisci.ReminisciMod;
 
+import java.util.function.Function;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Comparator;
 
 @ReminisciModElements.ModElement.Tag
 public class DwagonArmourLeggingsTickEventProcedure extends ReminisciModElements.ModElement {
@@ -76,45 +78,23 @@ public class DwagonArmourLeggingsTickEventProcedure extends ReminisciModElements
 								? ((LivingEntity) entity)
 										.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
 								: ItemStack.EMPTY).getItem() == new ItemStack(DwagonArmourItem.helmet, (int) (1)).getItem())))) {
-			if (world instanceof ServerWorld) {
-				Entity entityToSpawn = new SummonEnderDragonEntity.CustomEntity(SummonEnderDragonEntity.entity, (World) world);
-				entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
-			}
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private IWorld world;
-				public void start(IWorld world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					{
-						Entity _ent = entity;
-						if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-							_ent.world.getServer().getCommandManager().handleCommand(
-									_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-									"/kill @e[type=reminisci:summon_ender_dragon]");
+			if (((((Entity) world
+					.getEntitiesWithinAABB(SummonEnderDragonEntity.CustomEntity.class,
+							new AxisAlignedBB(x - (30 / 2d), y - (30 / 2d), z - (30 / 2d), x + (30 / 2d), y + (30 / 2d), z + (30 / 2d)), null)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 						}
-					}
-					MinecraftForge.EVENT_BUS.unregister(this);
+					}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) == (false))) {
+				if (world instanceof ServerWorld) {
+					Entity entityToSpawn = new SummonEnderDragonEntity.CustomEntity(SummonEnderDragonEntity.entity, (World) world);
+					entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+					if (entityToSpawn instanceof MobEntity)
+						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
+								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
+					world.addEntity(entityToSpawn);
 				}
-			}.start(world, (int) 200);
+			}
 		}
 	}
 

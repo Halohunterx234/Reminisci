@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:overite_armour_leggings"
+  },
+  "addition": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "result": {
+    "item": "reminisci:quintessential_armour_leggings"
+  }
+}

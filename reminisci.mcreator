@@ -1054,6 +1054,246 @@
           }
         ]
       }
+    },
+    {
+      "name": "EssenseofDawnItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "essenseof_dawn_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EssenseofDawn",
+      "type": "item",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "essenseof_dawn"
+    },
+    {
+      "name": "EssenceofDawnRecipe",
+      "type": "recipe",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "essenceof_dawn_recipe"
+    },
+    {
+      "name": "LazerProjectile",
+      "type": "item",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lazer_projectile"
+    },
+    {
+      "name": "Quasar",
+      "type": "gun",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quasar"
+    },
+    {
+      "name": "DragonGhastProjectile",
+      "type": "item",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dragon_ghast_projectile"
+    },
+    {
+      "name": "QuasarBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quasar_bullet_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuasarBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quasar_bullet_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DwagonScytheLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_scythe_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LightDiskProjectile",
+      "type": "item",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "light_disk_projectile"
+    },
+    {
+      "name": "DwagonScytheRecipe",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_scythe_recipe"
+    },
+    {
+      "name": "LightShard",
+      "type": "item",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "light_shard"
+    },
+    {
+      "name": "QuintessentialHelmetRecipe",
+      "type": "recipe",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_helmet_recipe"
+    },
+    {
+      "name": "QuintessentialChestRecipe",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_chest_recipe"
+    },
+    {
+      "name": "QuintessentialLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_leggings_recipe"
+    },
+    {
+      "name": "QuintessentialBootsRecipe",
+      "type": "recipe",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_boots_recipe"
+    },
+    {
+      "name": "DwagonHelmetRecipe",
+      "type": "recipe",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_helmet_recipe"
+    },
+    {
+      "name": "DwagonChestRecipe",
+      "type": "recipe",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_chest_recipe"
+    },
+    {
+      "name": "DwagonLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_leggings_recipe"
+    },
+    {
+      "name": "DwagonBootsRecipe",
+      "type": "recipe",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwagon_boots_recipe"
     }
   ],
   "variable_elements": [],
@@ -1062,48 +1302,54 @@
     "en_us": {
       "item.reminisci.overite_armour_chestplate": "Overite Armour Body",
       "block.reminisci.dawrion_block": "Dawrion Ore",
-      "item.reminisci.golden_coal": "Golden Coal",
       "item.reminisci.quintessential_armour_boots": "Quintessential Armour Boots",
-      "item.reminisci.dwagon_armour_helmet": "Dwagon Armour Helmet",
-      "entity.reminisci.summon_ender_dragon": "Dwagon\u0027s Pet Ghast",
-      "item.reminisci.quintessential_blade": "Quintessential Blade",
       "entity.reminisci.quintessential_orb": "Grandeur Spirit of Light",
       "item.reminisci.overite_axe": "Overite Axe",
-      "item.reminisci.quintessential_armour_leggings": "Quintessential Armour Leggings",
-      "item.reminisci.dwagon_armour_chestplate": "Dwagon Armour Body",
-      "item.reminisci.quintessential_hoe": "Quintessential Hoe",
+      "item.reminisci.dragon_ghast_projectile": "Dragon Ghast Projectile",
       "item.reminisci.quintessential_orb_warrior_spawn_egg": "Quintessential Orb Warrior Spawn Egg",
       "item.reminisci.dawrion_armour_chestplate": "Dawrion Armour Body",
       "itemGroup.tabreminisci": "Reminisci",
-      "item.reminisci.dwagon_scale": "Dwagon Scale",
       "item.reminisci.dwagon_armour_leggings": "Dwagon Armour Leggings",
+      "item.reminisci.light_disk_projectile": "Light Disk Projectile",
       "item.reminisci.dawrion_armour_leggings": "Dawrion Armour Leggings",
-      "item.reminisci.quintessential_orb_spawn_egg": "Grandeur Spirit of Light Spawn Egg",
       "item.reminisci.quintessential_pickaxe": "Quintessential Pickaxe",
-      "item.reminisci.overite_hoe": "Overite Hoe",
+      "item.reminisci.quintessential_orb_spawn_egg": "Grandeur Spirit of Light Spawn Egg",
       "item.reminisci.dawrion_armour_helmet": "Dawrion Armour Helmet",
-      "block.reminisci.earthly_debris": "Earthly Debris",
-      "item.reminisci.quintessential_armour_chestplate": "Quintessential Armour Body",
-      "item.reminisci.the_dwagon_aiot": "The Dwagon AIOT",
       "item.reminisci.quintessential_axe": "Quintessential Axe",
-      "item.reminisci.quintessential_orb_minion_spawn_egg": "Quintessential Orb Archer Spawn Egg",
       "item.reminisci.overite_shovel": "Overite Shovel",
       "item.reminisci.overite_armour_leggings": "Overite Armour Leggings",
-      "item.reminisci.overite_armour_boots": "Overite Armour Boots",
-      "item.reminisci.summon_ender_dragon_spawn_egg": "Dwagon\u0027s Pet Ghast Spawn Egg",
-      "item.reminisci.overite_armour_helmet": "Overite Armour Helmet",
-      "item.reminisci.overite_pickaxe": "Overite Pickaxe",
       "item.reminisci.dwagon_armour_boots": "Dwagon Armour Boots",
-      "item.reminisci.overite_scrap": "Overite Fragment",
       "item.reminisci.quintessential_armour_helmet": "Quintessential Armour Helmet",
       "entity.reminisci.quintessential_orb_warrior": "Quintessential Orb Warrior",
       "item.reminisci.dawrion_armour_boots": "Dawrion Armour Boots",
       "item.reminisci.quintessential_shovel": "Quintessential Shovel",
       "item.reminisci.dwagon_scythe": "Chaotic Scythe",
-      "block.reminisci.meteor_rock": "Meteor Rock",
       "item.reminisci.overite_sword": "Overite Sword",
-      "item.reminisci.overite_ingot": "Overite Ingot",
-      "entity.reminisci.quintessential_orb_minion": "Quintessential Orb Archer"
+      "entity.reminisci.quintessential_orb_minion": "Quintessential Orb Archer",
+      "item.reminisci.light_shard": "Light Shard",
+      "item.reminisci.golden_coal": "Golden Coal",
+      "item.reminisci.dwagon_armour_helmet": "Dwagon Armour Helmet",
+      "entity.reminisci.summon_ender_dragon": "Dwagon\u0027s Dragon Ghast",
+      "item.reminisci.quintessential_blade": "Quintessential Blade",
+      "item.reminisci.quintessential_armour_leggings": "Quintessential Armour Leggings",
+      "item.reminisci.dwagon_armour_chestplate": "Dwagon Armour Body",
+      "item.reminisci.quintessential_hoe": "Quintessential Hoe",
+      "item.reminisci.dwagon_scale": "Dwagon Scale",
+      "item.reminisci.lazer_projectile": "Lazer Projectile",
+      "item.reminisci.overite_hoe": "Overite Hoe",
+      "block.reminisci.earthly_debris": "Earthly Debris",
+      "item.reminisci.quintessential_armour_chestplate": "Quintessential Armour Body",
+      "item.reminisci.the_dwagon_aiot": "The Dwagon AIOT",
+      "item.reminisci.essenseof_dawn": "Essense of Dawn",
+      "item.reminisci.quasar": "Quasar",
+      "item.reminisci.quintessential_orb_minion_spawn_egg": "Quintessential Orb Archer Spawn Egg",
+      "item.reminisci.overite_armour_boots": "Overite Armour Boots",
+      "item.reminisci.summon_ender_dragon_spawn_egg": "Dwagon\u0027s Dragon Ghast Spawn Egg",
+      "item.reminisci.overite_armour_helmet": "Overite Armour Helmet",
+      "item.reminisci.overite_pickaxe": "Overite Pickaxe",
+      "item.reminisci.overite_scrap": "Overite Fragment",
+      "block.reminisci.meteor_rock": "Meteor Rock",
+      "item.reminisci.overite_ingot": "Overite Ingot"
     }
   },
   "foldersRoot": {

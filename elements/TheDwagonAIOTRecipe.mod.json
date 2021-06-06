@@ -2,19 +2,42 @@
   "_fv": 18,
   "_type": "recipe",
   "definition": {
-    "recipeType": "Smithing",
+    "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
     "recipeShapeless": false,
-    "smithingInputStack": {
-      "value": "CUSTOM:QuintessentialPickaxe"
-    },
-    "smithingInputAdditionStack": {
-      "value": "CUSTOM:DwagonScale"
-    },
-    "smithingReturnStack": {
+    "recipeSlots": [
+      {
+        "value": "Items.ENDER_EYE"
+      },
+      {
+        "value": "CUSTOM:QuintessentialPickaxe"
+      },
+      {
+        "value": "Items.ENDER_EYE"
+      },
+      {
+        "value": "CUSTOM:QuintessentialAxe"
+      },
+      {
+        "value": "CUSTOM:DwagonScale"
+      },
+      {
+        "value": "CUSTOM:QuintessentialShovel"
+      },
+      {
+        "value": "Items.ENDER_EYE"
+      },
+      {
+        "value": "CUSTOM:QuintessentialHoe"
+      },
+      {
+        "value": "Items.ENDER_EYE"
+      }
+    ],
+    "recipeReturnStack": {
       "value": "CUSTOM:TheDwagonAIOT"
     },
     "name": "the_dwagon_aiot_recipe",

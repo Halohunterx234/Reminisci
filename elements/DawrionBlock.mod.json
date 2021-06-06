@@ -78,7 +78,7 @@
     },
     "luminance": 15,
     "unbreakable": false,
-    "breakHarvestLevel": 4,
+    "breakHarvestLevel": 6,
     "spawnParticles": true,
     "particleToSpawn": {
       "value": "LAVA"

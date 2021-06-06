@@ -7,12 +7,8 @@ import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.gen.Heightmap;
-import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.ResourceLocation;
@@ -30,18 +26,11 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
-import net.mcreator.reminisci.procedures.QuintessentialOrbMinionEntityIsHurtProcedure;
-import net.mcreator.reminisci.procedures.QuintessentialOrbMinionEntityDiesProcedure;
 import net.mcreator.reminisci.entity.renderer.QuintessentialOrbWarriorRenderer;
 import net.mcreator.reminisci.ReminisciModElements;
-
-import java.util.Map;
-import java.util.HashMap;
 
 @ReminisciModElements.ModElement.Tag
 public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElement {
@@ -52,7 +41,6 @@ public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElem
 		super(instance, 35);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new QuintessentialOrbWarriorRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
-		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -60,15 +48,8 @@ public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElem
 		elements.entities.add(() -> entity);
 	}
 
-	@SubscribeEvent
-	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 20, 4, 4));
-	}
-
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				MonsterEntity::canMonsterSpawn);
 	}
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
@@ -93,7 +74,7 @@ public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElem
 			super(type, world);
 			experienceValue = 0;
 			setNoAI(false);
-			setCustomName(new StringTextComponent("Light Archer"));
+			setCustomName(new StringTextComponent("Light Warrior"));
 			setCustomNameVisible(true);
 		}
 
@@ -130,38 +111,9 @@ public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElem
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			Entity sourceentity = source.getTrueSource();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				QuintessentialOrbMinionEntityIsHurtProcedure.executeProcedure($_dependencies);
-			}
 			if (source.getImmediateSource() instanceof ArrowEntity)
 				return false;
 			return super.attackEntityFrom(source, amount);
-		}
-
-		@Override
-		public void onDeath(DamageSource source) {
-			super.onDeath(source);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity sourceentity = source.getTrueSource();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				QuintessentialOrbMinionEntityDiesProcedure.executeProcedure($_dependencies);
-			}
 		}
 	}
 }

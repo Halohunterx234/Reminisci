@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:overite_armour_chestplate"
+  },
+  "addition": {
+    "item": "minecraft:netherite_chestplate"
+  },
+  "result": {
+    "item": "reminisci:quintessential_armour_chestplate"
+  }
+}

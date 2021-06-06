@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "reminisci:overite_armour_boots"
+  },
+  "addition": {
+    "item": "minecraft:netherite_boots"
+  },
+  "result": {
+    "item": "reminisci:quintessential_armour_boots"
+  }
+}

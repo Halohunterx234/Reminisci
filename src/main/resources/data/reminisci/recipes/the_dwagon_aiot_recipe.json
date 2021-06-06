@@ -1,12 +1,42 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "reminisci:quintessential_pickaxe"
-  },
-  "addition": {
-    "item": "reminisci:dwagon_scale"
+  "group": "reminisci",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:ender_eye"
+    },
+    "1": {
+      "item": "reminisci:quintessential_pickaxe"
+    },
+    "2": {
+      "item": "minecraft:ender_eye"
+    },
+    "3": {
+      "item": "reminisci:quintessential_axe"
+    },
+    "4": {
+      "item": "reminisci:dwagon_scale"
+    },
+    "5": {
+      "item": "reminisci:quintessential_shovel"
+    },
+    "6": {
+      "item": "minecraft:ender_eye"
+    },
+    "7": {
+      "item": "reminisci:quintessential_hoe"
+    },
+    "8": {
+      "item": "minecraft:ender_eye"
+    }
   },
   "result": {
-    "item": "reminisci:the_dwagon_aiot"
+    "item": "reminisci:the_dwagon_aiot",
+    "count": 1
   }
 }
