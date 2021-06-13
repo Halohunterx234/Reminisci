@@ -44,7 +44,7 @@ public class DwagonScytheItem extends ReminisciModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 18f;
+				return 16f;
 			}
 
 			public int getHarvestLevel() {

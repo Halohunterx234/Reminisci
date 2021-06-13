@@ -52,7 +52,18 @@ public class DawrionArmourBodyTickEventProcedure extends ReminisciModElements.Mo
 								? ((LivingEntity) entity)
 										.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
 								: ItemStack.EMPTY).getItem() == new ItemStack(DawrionArmourItem.helmet, (int) (1)).getItem())))) {
-			if ((!(new Object() {
+			if ((!((new Object() {
+				public boolean checkGamemode(Entity _ent) {
+					if (_ent instanceof ServerPlayerEntity) {
+						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SPECTATOR;
+					} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
+						NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+								.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
+						return _npi != null && _npi.getGameType() == GameType.SPECTATOR;
+					}
+					return false;
+				}
+			}.checkGamemode(entity)) || (new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayerEntity) {
 						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.CREATIVE;
@@ -63,7 +74,7 @@ public class DawrionArmourBodyTickEventProcedure extends ReminisciModElements.Mo
 					}
 					return false;
 				}
-			}.checkGamemode(entity)))) {
+			}.checkGamemode(entity))))) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).abilities.allowFlying = (true);
 					((PlayerEntity) entity).sendPlayerAbilities();
@@ -108,7 +119,18 @@ public class DawrionArmourBodyTickEventProcedure extends ReminisciModElements.Mo
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.CONDUIT_POWER, (int) 300, (int) 2));
 			}
 		} else {
-			if ((!(new Object() {
+			if ((!((new Object() {
+				public boolean checkGamemode(Entity _ent) {
+					if (_ent instanceof ServerPlayerEntity) {
+						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SPECTATOR;
+					} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
+						NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+								.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
+						return _npi != null && _npi.getGameType() == GameType.SPECTATOR;
+					}
+					return false;
+				}
+			}.checkGamemode(entity)) || (new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayerEntity) {
 						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.CREATIVE;
@@ -119,7 +141,7 @@ public class DawrionArmourBodyTickEventProcedure extends ReminisciModElements.Mo
 					}
 					return false;
 				}
-			}.checkGamemode(entity)))) {
+			}.checkGamemode(entity))))) {
 				if (entity instanceof PlayerEntity) {
 					((PlayerEntity) entity).abilities.allowFlying = (false);
 					((PlayerEntity) entity).sendPlayerAbilities();

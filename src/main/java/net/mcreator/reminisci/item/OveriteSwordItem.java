@@ -14,10 +14,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 
-import net.mcreator.reminisci.procedures.OveriteSwordToolInHandTickProcedure;
 import net.mcreator.reminisci.procedures.OveriteSwordLivingEntityIsHitWithToolProcedure;
 import net.mcreator.reminisci.itemgroup.ReminisciItemGroup;
 import net.mcreator.reminisci.ReminisciModElements;
@@ -46,7 +44,7 @@ public class OveriteSwordItem extends ReminisciModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 5.5f;
+				return 3.5f;
 			}
 
 			public int getHarvestLevel() {
@@ -84,19 +82,6 @@ public class OveriteSwordItem extends ReminisciModElements.ModElement {
 					OveriteSwordLivingEntityIsHitWithToolProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
-			}
-
-			@Override
-			public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
-				super.inventoryTick(itemstack, world, entity, slot, selected);
-				double x = entity.getPosX();
-				double y = entity.getPosY();
-				double z = entity.getPosZ();
-				if (selected) {
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					OveriteSwordToolInHandTickProcedure.executeProcedure($_dependencies);
-				}
 			}
 		}.setRegistryName("overite_sword"));
 	}

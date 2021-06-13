@@ -283,6 +283,12 @@ public class EarthlyDebrisBlock extends ReminisciModElements.ModElement {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.DIORITE.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.GRANITE.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.GRAVEL.getDefaultState().getBlock())
+				blockCriteria = true;
 			return blockCriteria;
 		}
 
@@ -307,8 +313,8 @@ public class EarthlyDebrisBlock extends ReminisciModElements.ModElement {
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 2)).range(15)
-					.square().func_242731_b(10);
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(15)
+					.square().func_242731_b(2);
 			event.getRegistry().register(feature.setRegistryName("earthly_debris"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("reminisci:earthly_debris"), configuredFeature);
 		}

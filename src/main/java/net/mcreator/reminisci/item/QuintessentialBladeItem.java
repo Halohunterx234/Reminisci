@@ -44,7 +44,7 @@ public class QuintessentialBladeItem extends ReminisciModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 7f;
+				return 5f;
 			}
 
 			public int getHarvestLevel() {
