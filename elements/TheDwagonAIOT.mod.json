@@ -14,7 +14,7 @@
     },
     "toolType": "MultiTool",
     "harvestLevel": 6,
-    "efficiency": 20.0,
+    "efficiency": 30.0,
     "attackSpeed": 2.0,
     "enchantability": 30,
     "damageVsEntity": 4.0,

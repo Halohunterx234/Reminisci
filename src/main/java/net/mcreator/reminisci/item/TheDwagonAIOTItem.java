@@ -69,7 +69,7 @@ public class TheDwagonAIOTItem extends ReminisciModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-			return 20f;
+			return 30f;
 		}
 
 		@Override

@@ -1,0 +1,26 @@
+{
+  "group": "reminisci",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 "
+  ],
+  "key": {
+    "0": {
+      "item": "reminisci:overworld_pendant"
+    },
+    "1": {
+      "item": "reminisci:end_pendant"
+    },
+    "2": {
+      "item": "reminisci:nether_pendant"
+    },
+    "4": {
+      "item": "reminisci:essenseof_dawn"
+    }
+  },
+  "result": {
+    "item": "reminisci:tri_pendant",
+    "count": 1
+  }
+}

@@ -307,7 +307,7 @@ public class EarthlyDebrisBlock extends ReminisciModElements.ModElement {
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 16)).range(10)
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 2)).range(15)
 					.square().func_242731_b(10);
 			event.getRegistry().register(feature.setRegistryName("earthly_debris"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("reminisci:earthly_debris"), configuredFeature);

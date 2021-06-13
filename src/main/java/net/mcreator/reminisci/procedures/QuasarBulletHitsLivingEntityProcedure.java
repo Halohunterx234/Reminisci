@@ -1,13 +1,8 @@
 package net.mcreator.reminisci.procedures;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.reminisci.ReminisciModElements;
@@ -53,13 +48,7 @@ public class QuasarBulletHitsLivingEntityProcedure extends ReminisciModElements.
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof World && !((World) world).isRemote) {
-			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 4, Explosion.Mode.BREAK);
-		}
-		if (world instanceof ServerWorld) {
-			LightningBoltEntity _ent = EntityType.LIGHTNING_BOLT.create((World) world);
-			_ent.moveForced(Vector3d.copyCenteredHorizontally(new BlockPos((int) x, (int) y, (int) z)));
-			_ent.setEffectOnly(false);
-			((World) world).addEntity(_ent);
+			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 3, Explosion.Mode.BREAK);
 		}
 		entity.setFire((int) 15);
 	}

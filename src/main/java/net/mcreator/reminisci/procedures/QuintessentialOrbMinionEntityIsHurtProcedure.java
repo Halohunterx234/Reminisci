@@ -2,7 +2,6 @@ package net.mcreator.reminisci.procedures;
 
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
@@ -25,10 +24,6 @@ public class QuintessentialOrbMinionEntityIsHurtProcedure extends ReminisciModEl
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 120, (int) 1));
-		if (((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof LivingEntity)
-			((LivingEntity) ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null))
-					.addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 120, (int) 2));
-		((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null).setFire((int) 1);
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, (int) 120, (int) 1));
 	}
 }

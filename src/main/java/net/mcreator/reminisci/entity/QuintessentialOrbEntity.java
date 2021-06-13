@@ -82,11 +82,11 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 300);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 400);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 1);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 4);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 3);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 3);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -117,7 +117,7 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8));
 			this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
+			this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.6));
 		}
 
 		@Override
@@ -150,10 +150,6 @@ public class QuintessentialOrbEntity extends ReminisciModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
 				QuintessentialOrbEntityIsHurtProcedure.executeProcedure($_dependencies);
 			}
 			if (source == DamageSource.LIGHTNING_BOLT)

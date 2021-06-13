@@ -245,15 +245,6 @@
       "registry_name": "deadoaktree"
     },
     {
-      "name": "Chickenfarmdungeonlvl1",
-      "type": "structure",
-      "sortid": 21,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "chickenfarmdungeonlvl_1"
-    },
-    {
       "name": "OveriteSword",
       "type": "tool",
       "sortid": 22,
@@ -378,22 +369,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -1294,6 +1269,394 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "dwagon_boots_recipe"
+    },
+    {
+      "name": "DwarionHelmetRecipe",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwarion_helmet_recipe"
+    },
+    {
+      "name": "DwarionChestRecipe",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwarion_chest_recipe"
+    },
+    {
+      "name": "DwarionLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwarion_leggings_recipe"
+    },
+    {
+      "name": "DwarionBootsRecipe",
+      "type": "recipe",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dwarion_boots_recipe"
+    },
+    {
+      "name": "OverworldPendant",
+      "type": "item",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_pendant"
+    },
+    {
+      "name": "NetherPendant",
+      "type": "item",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_pendant"
+    },
+    {
+      "name": "EndPendant",
+      "type": "item",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_pendant"
+    },
+    {
+      "name": "TriPendant",
+      "type": "item",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tri_pendant"
+    },
+    {
+      "name": "OverworldPendantItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_pendant_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NetherPendantItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_pendant_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EndPendantItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_pendant_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TriPendantItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tri_pendant_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverworldPendantRecipe",
+      "type": "recipe",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_pendant_recipe"
+    },
+    {
+      "name": "NetherPendantRecipe",
+      "type": "recipe",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_pendant_recipe"
+    },
+    {
+      "name": "EndPendantRecipe",
+      "type": "recipe",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_pendant_recipe"
+    },
+    {
+      "name": "TriPendantRecipe",
+      "type": "recipe",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tri_pendant_recipe"
+    },
+    {
+      "name": "QuasarRecipe",
+      "type": "recipe",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quasar_recipe"
+    },
+    {
+      "name": "RuneStoneRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_stone_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RuneStone",
+      "type": "item",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_stone"
+    },
+    {
+      "name": "RuneStoneRecipe",
+      "type": "recipe",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_stone_recipe"
+    },
+    {
+      "name": "DragonGhastProjectileLivingEntityIsHitWithItem",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dragon_ghast_projectile_living_entity_is_hit_with_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuintessentialOrbEntityFalls",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_orb_entity_falls",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuintessentialOrbWarriorEntityIsHurt",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_orb_warrior_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuintessentialOrbII",
+      "type": "mob",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_orb_ii"
+    },
+    {
+      "name": "QuintessentialOrbIIOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quintessential_orb_ii_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RuneStoneItemIsDroppedByPlayer",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_stone_item_is_dropped_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Statue",
+      "type": "structure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "statue"
+    },
+    {
+      "name": "Hand",
+      "type": "structure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hand"
     }
   ],
   "variable_elements": [],
@@ -1306,8 +1669,9 @@
       "entity.reminisci.quintessential_orb": "Grandeur Spirit of Light",
       "item.reminisci.overite_axe": "Overite Axe",
       "item.reminisci.dragon_ghast_projectile": "Dragon Ghast Projectile",
-      "item.reminisci.quintessential_orb_warrior_spawn_egg": "Quintessential Orb Warrior Spawn Egg",
+      "item.reminisci.nether_pendant": "Nether Pendant",
       "item.reminisci.dawrion_armour_chestplate": "Dawrion Armour Body",
+      "item.reminisci.quintessential_orb_warrior_spawn_egg": "Quintessential Orb Warrior Spawn Egg",
       "itemGroup.tabreminisci": "Reminisci",
       "item.reminisci.dwagon_armour_leggings": "Dwagon Armour Leggings",
       "item.reminisci.light_disk_projectile": "Light Disk Projectile",
@@ -1318,6 +1682,8 @@
       "item.reminisci.quintessential_axe": "Quintessential Axe",
       "item.reminisci.overite_shovel": "Overite Shovel",
       "item.reminisci.overite_armour_leggings": "Overite Armour Leggings",
+      "item.reminisci.rune_stone": "Rune Stone",
+      "item.reminisci.end_pendant": "End Pendant",
       "item.reminisci.dwagon_armour_boots": "Dwagon Armour Boots",
       "item.reminisci.quintessential_armour_helmet": "Quintessential Armour Helmet",
       "entity.reminisci.quintessential_orb_warrior": "Quintessential Orb Warrior",
@@ -1327,11 +1693,14 @@
       "item.reminisci.overite_sword": "Overite Sword",
       "entity.reminisci.quintessential_orb_minion": "Quintessential Orb Archer",
       "item.reminisci.light_shard": "Light Shard",
+      "item.reminisci.quintessential_orb_ii_spawn_egg": "Grandeur Spirit of Light Spawn Egg",
       "item.reminisci.golden_coal": "Golden Coal",
+      "item.reminisci.overworld_pendant": "Overworld Pendant",
       "item.reminisci.dwagon_armour_helmet": "Dwagon Armour Helmet",
       "entity.reminisci.summon_ender_dragon": "Dwagon\u0027s Dragon Ghast",
       "item.reminisci.quintessential_blade": "Quintessential Blade",
       "item.reminisci.quintessential_armour_leggings": "Quintessential Armour Leggings",
+      "entity.reminisci.quintessential_orb_ii": "Grandeur Spirit of Light",
       "item.reminisci.dwagon_armour_chestplate": "Dwagon Armour Body",
       "item.reminisci.quintessential_hoe": "Quintessential Hoe",
       "item.reminisci.dwagon_scale": "Dwagon Scale",
@@ -1349,6 +1718,7 @@
       "item.reminisci.overite_pickaxe": "Overite Pickaxe",
       "item.reminisci.overite_scrap": "Overite Fragment",
       "block.reminisci.meteor_rock": "Meteor Rock",
+      "item.reminisci.tri_pendant": "Pendant of Three Worlds",
       "item.reminisci.overite_ingot": "Overite Ingot"
     }
   },

@@ -9,7 +9,6 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.BoneMealItem;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
@@ -94,9 +93,13 @@ public class OveriteSwordLivingEntityIsHitWithToolProcedure extends ReminisciMod
 					((World) world).playEvent(2005, new BlockPos((int) x, (int) y, (int) (z + 1)), 0);
 			}
 		}
-		if (((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof LivingEntity)
-			((LivingEntity) ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null))
-					.addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 100, (int) 0.5));
+		{
+			Entity _ent = entity;
+			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+						"effect give @e[distance=..20,type=!player] minecraft:weakness 5 1 true");
+			}
+		}
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.BLINDNESS, (int) 100, (int) 0.5));
 	}

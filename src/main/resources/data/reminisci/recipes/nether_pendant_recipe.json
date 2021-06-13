@@ -1,0 +1,30 @@
+{
+  "group": "reminisci",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:quartz"
+    },
+    "3": {
+      "item": "minecraft:quartz"
+    },
+    "4": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "5": {
+      "item": "minecraft:quartz"
+    },
+    "7": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "reminisci:nether_pendant",
+    "count": 1
+  }
+}

@@ -1,0 +1,31 @@
+package net.mcreator.reminisci.procedures;
+
+import net.minecraft.entity.Entity;
+
+import net.mcreator.reminisci.ReminisciModElements;
+import net.mcreator.reminisci.ReminisciMod;
+
+import java.util.Map;
+
+@ReminisciModElements.ModElement.Tag
+public class QuintessentialOrbEntityFallsProcedure extends ReminisciModElements.ModElement {
+	public QuintessentialOrbEntityFallsProcedure(ReminisciModElements instance) {
+		super(instance, 113);
+	}
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				ReminisciMod.LOGGER.warn("Failed to load dependency entity for procedure QuintessentialOrbEntityFalls!");
+			return;
+		}
+		Entity entity = (Entity) dependencies.get("entity");
+		{
+			Entity _ent = entity;
+			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+						"/tp @e[type=player,distance=..20] ^5 ^1 ^5");
+			}
+		}
+	}
+}

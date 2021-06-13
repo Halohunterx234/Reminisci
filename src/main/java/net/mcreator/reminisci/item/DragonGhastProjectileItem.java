@@ -9,12 +9,16 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.reminisci.procedures.DragonGhastProjectileLivingEntityIsHitWithItemProcedure;
 import net.mcreator.reminisci.ReminisciModElements;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 
 @ReminisciModElements.ModElement.Tag
 public class DragonGhastProjectileItem extends ReminisciModElements.ModElement {
@@ -53,6 +57,24 @@ public class DragonGhastProjectileItem extends ReminisciModElements.ModElement {
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Pew pew"));
+		}
+
+		@Override
+		public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+			boolean retval = super.hitEntity(itemstack, entity, sourceentity);
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			World world = entity.world;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				DragonGhastProjectileLivingEntityIsHitWithItemProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
 		}
 	}
 }

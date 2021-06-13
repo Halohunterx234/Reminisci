@@ -31,7 +31,7 @@ public class QuintessentialOrbPlayerCollidesWithThisEntityProcedure extends Remi
 		}
 		if (((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof LivingEntity)
 			((LivingEntity) ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null))
-					.addPotionEffect(new EffectInstance(Effects.LEVITATION, (int) 10, (int) 2));
+					.addPotionEffect(new EffectInstance(Effects.UNLUCK, (int) 10, (int) 2));
 		if (((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof LivingEntity)
 			((LivingEntity) ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null))
 					.addPotionEffect(new EffectInstance(Effects.NAUSEA, (int) 60, (int) 2));

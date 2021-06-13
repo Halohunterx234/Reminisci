@@ -47,7 +47,7 @@ public class DwagonArmourBodyTickEventProcedure extends ReminisciModElements.Mod
 										.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
 								: ItemStack.EMPTY).getItem() == new ItemStack(DwagonArmourItem.helmet, (int) (1)).getItem())))) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HEALTH_BOOST, (int) 300, (int) 2));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HASTE, (int) 300, (int) 1));
 			if ((((entity instanceof LivingEntity)
 					? ((LivingEntity) entity).getHealth()
 					: -1) <= (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 2))) {
@@ -62,7 +62,7 @@ public class DwagonArmourBodyTickEventProcedure extends ReminisciModElements.Mod
 					? ((LivingEntity) entity).getHealth()
 					: -1) <= (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 3))) {
 				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 100, (int) 1));
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, (int) 100, (int) 1));
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 100, (int) 1));
 				if (entity instanceof LivingEntity)

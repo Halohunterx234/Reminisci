@@ -13,8 +13,10 @@ import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.network.IPacket;
 import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -27,10 +29,16 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
+import net.mcreator.reminisci.procedures.QuintessentialOrbWarriorEntityIsHurtProcedure;
 import net.mcreator.reminisci.entity.renderer.QuintessentialOrbWarriorRenderer;
 import net.mcreator.reminisci.ReminisciModElements;
+
+import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @ReminisciModElements.ModElement.Tag
 public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElement {
@@ -55,12 +63,12 @@ public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElem
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 10);
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 50);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 5);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 3);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 2);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -86,8 +94,8 @@ public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElem
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, QuintessentialOrbEntity.CustomEntity.class, false, true));
-			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false));
+			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, true));
+			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 0.8, true));
 			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 1));
 			this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
 			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
@@ -111,9 +119,35 @@ public class QuintessentialOrbWarriorEntity extends ReminisciModElements.ModElem
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			Entity sourceentity = source.getTrueSource();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				QuintessentialOrbWarriorEntityIsHurtProcedure.executeProcedure($_dependencies);
+			}
 			if (source.getImmediateSource() instanceof ArrowEntity)
 				return false;
 			return super.attackEntityFrom(source, amount);
+		}
+
+		public void livingTick() {
+			super.livingTick();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Random random = this.rand;
+			Entity entity = this;
+			if (true)
+				for (int l = 0; l < 2; ++l) {
+					double d0 = (x + 0.5) + (random.nextFloat() - 0.5) * 0.2999999985098839D;
+					double d1 = ((y + 0.7) + (random.nextFloat() - 0.5) * 0.2999999985098839D * 100) + 0.5;
+					double d2 = (z + 0.5) + (random.nextFloat() - 0.5) * 0.2999999985098839D;
+					world.addParticle(ParticleTypes.CRIT, d0, d1, d2, 0, 0, 0);
+				}
 		}
 	}
 }

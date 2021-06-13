@@ -86,6 +86,14 @@ public class DwagonArmourLeggingsTickEventProcedure extends ReminisciModElements
 							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 						}
 					}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) == (false))) {
+				{
+					Entity _ent = entity;
+					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+						_ent.world.getServer().getCommandManager().handleCommand(
+								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+								"/kill @e[type=reminisci:summon_ender_dragon]");
+					}
+				}
 				if (world instanceof ServerWorld) {
 					Entity entityToSpawn = new SummonEnderDragonEntity.CustomEntity(SummonEnderDragonEntity.entity, (World) world);
 					entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);

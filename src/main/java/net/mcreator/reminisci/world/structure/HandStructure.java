@@ -34,11 +34,11 @@ import net.mcreator.reminisci.ReminisciModElements;
 import java.util.Random;
 
 @ReminisciModElements.ModElement.Tag
-public class Chickenfarmdungeonlvl1Structure extends ReminisciModElements.ModElement {
+public class HandStructure extends ReminisciModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
-	public Chickenfarmdungeonlvl1Structure(ReminisciModElements instance) {
-		super(instance, 21);
+	public HandStructure(ReminisciModElements instance) {
+		super(instance, 118);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -56,7 +56,7 @@ public class Chickenfarmdungeonlvl1Structure extends ReminisciModElements.ModEle
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 2000) {
+					if ((random.nextInt(1000000) + 1) <= 1000) {
 						int count = random.nextInt(1) + 1;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
@@ -65,12 +65,12 @@ public class Chickenfarmdungeonlvl1Structure extends ReminisciModElements.ModEle
 							j -= 1;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + 0, j + -5, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
 							Template template = world.getWorld().getStructureTemplateManager()
-									.getTemplateDefaulted(new ResourceLocation("reminisci", "chickenfarm_dungeonlvl1"));
+									.getTemplateDefaulted(new ResourceLocation("reminisci", "handofiain"));
 							if (template == null)
 								return false;
 							template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
@@ -83,17 +83,12 @@ public class Chickenfarmdungeonlvl1Structure extends ReminisciModElements.ModEle
 			};
 			configuredFeature = feature.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
 					.withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG));
-			event.getRegistry().register(feature.setRegistryName("chickenfarmdungeonlvl_1"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("reminisci:chickenfarmdungeonlvl_1"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("hand"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("reminisci:hand"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		boolean biomeCriteria = false;
-		if (new ResourceLocation("plains").equals(event.getName()))
-			biomeCriteria = true;
-		if (!biomeCriteria)
-			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);
 	}
 }

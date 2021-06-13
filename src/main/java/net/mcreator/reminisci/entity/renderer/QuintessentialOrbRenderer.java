@@ -24,7 +24,7 @@ public class QuintessentialOrbRenderer {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("reminisci:textures/969da8eb1e059ade2b8715f9b849022a32480392.png");
+						return new ResourceLocation("reminisci:textures/boss.png");
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

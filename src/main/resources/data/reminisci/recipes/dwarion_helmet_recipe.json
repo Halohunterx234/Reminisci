@@ -1,0 +1,32 @@
+{
+  "group": "reminisci",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "reminisci:light_shard"
+    },
+    "1": {
+      "item": "reminisci:essenseof_dawn"
+    },
+    "2": {
+      "item": "reminisci:light_shard"
+    },
+    "3": {
+      "item": "reminisci:light_shard"
+    },
+    "4": {
+      "item": "reminisci:dwagon_armour_helmet"
+    },
+    "5": {
+      "item": "reminisci:light_shard"
+    }
+  },
+  "result": {
+    "item": "reminisci:dawrion_armour_helmet",
+    "count": 1
+  }
+}

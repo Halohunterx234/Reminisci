@@ -49,7 +49,7 @@ public class QuintessentialArmourBodyTickEventProcedure extends ReminisciModElem
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 60, (int) 1));
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 60, (int) 1));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 300, (int) 1));
 			if ((((entity instanceof LivingEntity)
 					? ((LivingEntity) entity).getHealth()
 					: -1) <= (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 2))) {
@@ -59,8 +59,6 @@ public class QuintessentialArmourBodyTickEventProcedure extends ReminisciModElem
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, (int) 100, (int) 0.5));
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, (int) 100, (int) 0.5));
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HEALTH_BOOST, (int) 100, (int) 0.5));
 			}
 			if ((((entity instanceof LivingEntity)
 					? ((LivingEntity) entity).getHealth()
@@ -71,8 +69,6 @@ public class QuintessentialArmourBodyTickEventProcedure extends ReminisciModElem
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 100, (int) 0.5));
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, (int) 100, (int) 0.5));
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 100, (int) 0.5));
 			}
 		}
 	}

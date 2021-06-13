@@ -7,14 +7,10 @@ import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.gen.Heightmap;
-import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.MathHelper;
@@ -42,14 +38,18 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.reminisci.procedures.QuintessentialOrbMinionEntityIsHurtProcedure;
 import net.mcreator.reminisci.item.LightDiskProjectileItem;
 import net.mcreator.reminisci.entity.renderer.QuintessentialOrbMinionRenderer;
 import net.mcreator.reminisci.ReminisciModElements;
+
+import java.util.Map;
+import java.util.HashMap;
 
 @ReminisciModElements.ModElement.Tag
 public class QuintessentialOrbMinionEntity extends ReminisciModElements.ModElement {
@@ -63,7 +63,6 @@ public class QuintessentialOrbMinionEntity extends ReminisciModElements.ModEleme
 		super(instance, 32);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new QuintessentialOrbMinionRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
-		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -72,26 +71,19 @@ public class QuintessentialOrbMinionEntity extends ReminisciModElements.ModEleme
 		elements.entities.add(() -> arrow);
 	}
 
-	@SubscribeEvent
-	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 20, 4, 4));
-	}
-
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				MonsterEntity::canMonsterSpawn);
 	}
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5);
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 20);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1);
-			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.3);
+			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.5);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -151,6 +143,21 @@ public class QuintessentialOrbMinionEntity extends ReminisciModElements.ModEleme
 		@Override
 		public boolean onLivingFall(float l, float d) {
 			return false;
+		}
+
+		@Override
+		public boolean attackEntityFrom(DamageSource source, float amount) {
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			Entity sourceentity = source.getTrueSource();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				QuintessentialOrbMinionEntityIsHurtProcedure.executeProcedure($_dependencies);
+			}
+			return super.attackEntityFrom(source, amount);
 		}
 
 		public void attackEntityWithRangedAttack(LivingEntity target, float flval) {

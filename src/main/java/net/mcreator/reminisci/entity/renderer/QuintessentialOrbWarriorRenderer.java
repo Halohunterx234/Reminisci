@@ -24,7 +24,7 @@ public class QuintessentialOrbWarriorRenderer {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("reminisci:textures/e4e6706e0f1c668d6a6df14c870bbb0daba66076.png");
+						return new ResourceLocation("reminisci:textures/minion.png");
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));
