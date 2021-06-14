@@ -26,8 +26,6 @@ public class EndPendantItemInInventoryTickProcedure extends ReminisciModElements
 		Entity entity = (Entity) dependencies.get("entity");
 		if (((entity.world.getDimensionKey()) == (World.THE_END))) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 60, (int) 0.5));
-			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 60, (int) 0.5));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, (int) 60, (int) 0.5));

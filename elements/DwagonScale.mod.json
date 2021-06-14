@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "dwagonscale",
     "customModelName": "Normal",
-    "name": "Dwagon Scale",
+    "name": "Dragon Scale",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:Reminisci"
@@ -26,7 +26,7 @@
     "damageVsEntity": 0.0,
     "specialInfo": [
       "Scales of the Dragon",
-      "radiating with chaotic energy"
+      "Radiating with chaotic energy"
     ],
     "hasGlow": true,
     "guiBoundTo": "<NONE>",

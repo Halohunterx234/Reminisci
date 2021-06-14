@@ -1,0 +1,42 @@
+{
+  "group": "reminisci",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "1": {
+      "item": "minecraft:shulker_shell"
+    },
+    "2": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "3": {
+      "item": "minecraft:shulker_shell"
+    },
+    "4": {
+      "item": "minecraft:dragon_head"
+    },
+    "5": {
+      "item": "minecraft:shulker_shell"
+    },
+    "6": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "7": {
+      "item": "minecraft:shulker_shell"
+    },
+    "8": {
+      "item": "minecraft:chorus_fruit"
+    }
+  },
+  "result": {
+    "item": "minecraft:dragon_egg",
+    "count": 1
+  }
+}

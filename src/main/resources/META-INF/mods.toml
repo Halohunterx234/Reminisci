@@ -1,14 +1,18 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Academic Free License v3.0"
+license="All Rights Reserved"
 
 [[mods]]
 modId="reminisci"
 version="1.0.0"
 displayName="Reminisci"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="ultra_91rybsa, MCreator"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/reminisci"
+logoFile="logo.png"
+authors="Ultrahalogt, Cryoant, MCreator"
+description='''
+Just a bunch of small content fitted to a line of progression
+'''
 
 [[dependencies.reminisci]]
     modId="minecraft"

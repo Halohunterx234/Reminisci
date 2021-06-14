@@ -84,7 +84,7 @@ public class QuasarItem extends ReminisciModElements.ModElement {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("The dimensions tremble"));
 			list.add(new StringTextComponent("Realities fall apart"));
-			list.add(new StringTextComponent("in the presence of this monster"));
+			list.add(new StringTextComponent("In the presence of this item"));
 		}
 
 		@Override

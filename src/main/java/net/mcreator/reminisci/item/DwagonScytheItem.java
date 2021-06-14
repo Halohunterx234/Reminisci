@@ -62,7 +62,7 @@ public class DwagonScytheItem extends ReminisciModElements.ModElement {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
-				list.add(new StringTextComponent("Chaotic Scythe"));
+				list.add(new StringTextComponent("Something stirs within you..."));
 			}
 
 			@Override

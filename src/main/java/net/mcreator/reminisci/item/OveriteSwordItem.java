@@ -62,7 +62,7 @@ public class OveriteSwordItem extends ReminisciModElements.ModElement {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
-				list.add(new StringTextComponent("An dull sword comprised of earthly essence"));
+				list.add(new StringTextComponent("A dull sword comprised of earthly essence"));
 			}
 
 			@Override

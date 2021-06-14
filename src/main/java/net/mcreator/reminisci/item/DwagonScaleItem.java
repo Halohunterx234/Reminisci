@@ -62,7 +62,7 @@ public class DwagonScaleItem extends ReminisciModElements.ModElement {
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Scales of the Dragon"));
-			list.add(new StringTextComponent("radiating with chaotic energy"));
+			list.add(new StringTextComponent("Radiating with chaotic energy"));
 		}
 	}
 }

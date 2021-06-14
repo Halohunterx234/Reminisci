@@ -39,7 +39,7 @@ public class TheDwagonAIOTItem extends ReminisciModElements.ModElement {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
-				list.add(new StringTextComponent("Chaotic Energy Unleashed Through Pure Destruction"));
+				list.add(new StringTextComponent("Chaotic energy unleashed through pure destruction"));
 			}
 		}.setRegistryName("the_dwagon_aiot"));
 	}

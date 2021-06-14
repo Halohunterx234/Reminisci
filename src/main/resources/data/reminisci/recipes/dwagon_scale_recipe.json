@@ -14,7 +14,7 @@
       "item": "minecraft:dragon_breath"
     },
     "2": {
-      "item": "minecraft:nether_star"
+      "item": "minecraft:blaze_rod"
     },
     "3": {
       "item": "minecraft:dragon_breath"
@@ -26,17 +26,17 @@
       "item": "minecraft:dragon_breath"
     },
     "6": {
-      "item": "minecraft:blaze_powder"
+      "item": "minecraft:blaze_rod"
     },
     "7": {
       "item": "minecraft:dragon_breath"
     },
     "8": {
-      "item": "minecraft:prismarine_shard"
+      "item": "minecraft:ender_eye"
     }
   },
   "result": {
     "item": "reminisci:dwagon_scale",
-    "count": 2
+    "count": 3
   }
 }

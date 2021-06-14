@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 2,
+    "recipeRetstackSize": 3,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
@@ -16,7 +16,7 @@
         "value": "Items.DRAGON_BREATH"
       },
       {
-        "value": "Items.NETHER_STAR"
+        "value": "Items.BLAZE_ROD"
       },
       {
         "value": "Items.DRAGON_BREATH"
@@ -28,13 +28,13 @@
         "value": "Items.DRAGON_BREATH"
       },
       {
-        "value": "Items.BLAZE_POWDER"
+        "value": "Items.BLAZE_ROD"
       },
       {
         "value": "Items.DRAGON_BREATH"
       },
       {
-        "value": "Items.PRISMARINE_SHARD"
+        "value": "Items.ENDER_EYE"
       }
     ],
     "recipeReturnStack": {
