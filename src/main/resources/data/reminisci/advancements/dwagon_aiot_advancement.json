@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "reminisci:the_dwagon_aiot"
+    },
+    "title": {
+      "translate": "advancements.dwagon_aiot_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.dwagon_aiot_advancement.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dwagon_aiot_advancement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "reminisci:the_dwagon_aiot",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "reminisci:quintessential_sword_advancement"
+}

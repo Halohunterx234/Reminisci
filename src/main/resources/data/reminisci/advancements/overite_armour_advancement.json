@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "reminisci:overite_sword"
+    },
+    "title": {
+      "translate": "advancements.overite_armour_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.overite_armour_advancement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "overite_armour_advancement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "reminisci:overite_sword",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "reminisci:overite_ingot_advancement"
+}
